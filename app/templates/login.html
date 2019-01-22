@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block login_block %}
+    <h1>Sign In</h1>
+    <form action="/login" method="POST" novalidate>
+        <p>
+            {{ rform.text.label }}<br>
+            {{ rform.text }}
+        </p>
+        
+        <p>
+            {{ rform.pas.label }}<br>
+            {{ rform.pas }}
+        </p>
+        <p>
+            {{ rform.btn_sbt }}
+        </p>
+    </form>
+{% endblock %}

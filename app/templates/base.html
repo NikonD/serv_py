@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - microblog</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <div class="her">
+      Microblog:
+      <a href="/index">Home</a>
+      <a href="/login">Login</a>
+      <a href="/signup">Sign up</a>
+      <a href="/logout">Log Out<a>
+    </div>
+    <hr>
+    <div class="content">
+      {% block content %} {% endblock %}
+    </div>
+    <div class="login_block">
+      {% block login_block %}{% endblock %}
+    </div>
+    <div class="sign_up">
+      {% block sign_up %}{% endblock  %}
+    </div>
+  </body>
+</html>

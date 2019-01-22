@@ -1,0 +1,14 @@
+rate_system/bin/pip3 install flask
+rate_system/bin/pip3 install flask-login
+rate_system/bin/pip3 install flask-openid
+rate_system/bin/pip3 install flask-mail
+rate_system/bin/pip3 install sqlalchemy
+rate_system/bin/pip3 install flask-sqlalchemy
+rate_system/bin/pip3 install sqlalchemy-migrate
+rate_system/bin/pip3 install flask-whooshalchemy
+rate_system/bin/pip3 install flask-wtf
+rate_system/bin/pip3 install pytz
+rate_system/bin/pip3 install flask-babel
+rate_system/bin/pip3 install flup
+rate_system/bin/pip3 install psycopg2
+rate_system/bin/pip3 install psycopg2-binary
