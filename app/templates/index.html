@@ -2,10 +2,18 @@
 {% block content %}
 <div class="her">
     <H1>MAIN PAGE</H1>
-    {{ p }}
 </div>
 <h2>{{ user }}</h2>
-{% for rr in r %}
-содержимое запроса 
-{% endfor %}
+    <table border=1px cellpadding=5>
+        <tr>
+            <th>Рейтинг</th><th>id учителя</th><th>Фамилия</th><th>Имя</th><th>Сезон</th><th>Критерий</th><th>Группа критерия</th>
+        </tr>
+        {% for r in rec %}
+            <tr>
+            {% for i in r %}
+                <td> {{ i }} </td>
+            {% endfor%}
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

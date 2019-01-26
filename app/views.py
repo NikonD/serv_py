@@ -3,37 +3,27 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 from app import app
 from app.forms import LoginForm 
 from app.smdb import DataManage
-#from app.hasher import PasswordManager
 import argon2
-# from hashlib import sha256
-
-# pas = "jojo1234"
-# log = "admin"
-# h_str = a.hash(pas + log)
-# print('hashed')
-
-# bool_ = a.verify(h_str , pas+log)
-# print(bool_)
-
-lst = ''
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
 
-lst = dm.GetPassword('admin')
+# for row in her:
+    # print(row)
 
+lst = []
+# her = dm.GetRateByTeacher(dm.GetIDTeacherByIIN('000000000001'))
 
 @app.route('/')
 @app.route('/index')
 def index():
-    #pas = dm.GetPassword('admin')
-    #print(pas)
     if 'username' in session:
-        return render_template('index.html' , user='Logged in as %s' % escape(session['username']))
-    return render_template('index.html' , user='You are not logged in' , p=dm.GetPassword('admin'))
-        #return 'Logged in as %s' % escape(session['username'])
-    #return 'You are not logged in'
+        her = dm.ShowAll()
+        return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
+    return render_template('index.html' , user='You are not logged in')
+
     
+
 
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
@@ -51,10 +41,11 @@ def logout():
 def login():
     if request.method == 'POST':
         user = request.form['text']
-        #if  hs.verify(dm.GetPassword(user) , request.form['pas']):
-        if request.form['pas'] == 'jojo1234':
-            session['username'] = user
-            return redirect(url_for('index'))
-        else:
+        try:
+            if hs.verify(dm.GetPassword(user) , request.form['pas']):
+                session['username'] = user
+                return redirect(url_for('index'))
+        except argon2.exceptions.VerifyMismatchError:
+            print('wrong password')
             flash('wrong')
     return render_template("login.html" , rform=LoginForm())

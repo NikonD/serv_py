@@ -6,15 +6,24 @@ dcurs= DictCursor
 
 class DataManage():
 
-    def ClearAllInfo():
-        print()
+    def ShowAll(self):
+        conn = psql.connect(dsn)
+        curs = conn.cursor()
+        curs.execute("SELECT * FROM select_all")
+        return curs.fetchall()
+
 
     def AddRecord(self , data):
         conn = psql.connect(dsn)
         curs = conn.cursor()
         curs.execute("")
         conn.commit()
-        data=""
+    
+    def GetIDTeacherByIIN(self , iin):
+        conn =psql.connect(dsn)
+        curs = conn.cursor(cursor_factory=DictCursor)
+        curs.execute("SELECT id_teacher FROM teachers WHERE iin_teacher = %s " , (iin,))
+        return curs.fetchall()[0][0]
     
     def GetAllRecordsByTable(self , table ):
         conn = psql.connect(dsn)
@@ -27,23 +36,24 @@ class DataManage():
         curs = conn.cursor()
         curs.execute("UPDATE ")
         conn.commit()
-        conn.close()
+
     def LoadTeacherInfoBuIin(self):
         print()
 
     def GetPassword(self , username):
         conn = psql.connect(dsn)
         curs = conn.cursor(cursor_factory=DictCursor)
-        curs.execute("SELECT * FROM manage_persons WHERE login='"+username+"'")
-        return curs.fetchall()[0][2]
+        curs.execute("SELECT password FROM manage_persons WHERE login= %s" , (username,))
+        return curs.fetchall()[0][0].strip()
+
     def GetSeeasonByTeacher():
         print()
 
-    def GetRateByTeacher():
-        print()
+    def GetRateByTeacher(self , id_teach):
+        conn = psql.connect(dsn)
+        curs = conn.cursor(cursor_factory=DictCursor)
+        curs.execute("SELECT val_rate , id_indicator FROM rate WHERE id_teacher = %s" ,(id_teach,))
+        return curs.fetchall()
 
     def GetIndicatorsByTeacher():
-        print()
-
-    def UpdateInfo():
         print()
