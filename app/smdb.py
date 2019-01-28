@@ -55,5 +55,8 @@ class DataManage():
         curs.execute("SELECT val_rate , id_indicator FROM rate WHERE id_teacher = %s" ,(id_teach,))
         return curs.fetchall()
 
-    def GetIndicatorsByTeacher():
-        print()
+    def GetIndicators(self):
+        conn = psql.connect(dsn)
+        curs = conn.cursor()
+        curs.execute("SELECT * From indicator")
+        return curs.fetchall() 

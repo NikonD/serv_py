@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import url_for
 from flask import Flask, flash, redirect, render_template, request, session, abort , escape
 from app import app
@@ -8,11 +9,6 @@ import argon2
 dm = DataManage()
 hs = argon2.PasswordHasher()
 
-# for row in her:
-    # print(row)
-
-lst = []
-# her = dm.GetRateByTeacher(dm.GetIDTeacherByIIN('000000000001'))
 
 @app.route('/')
 @app.route('/index')
@@ -22,14 +18,10 @@ def index():
         return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
     return render_template('index.html' , user='You are not logged in')
 
-    
-
-
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
     rfrm=LoginForm()
     return render_template("signup.html" , rform=rfrm )
-
 
 @app.route('/logout')
 def logout():
@@ -49,3 +41,8 @@ def login():
             print('wrong password')
             flash('wrong')
     return render_template("login.html" , rform=LoginForm())
+
+@app.route('/indicator')
+def ind():
+    r = dm.GetIndicators()
+    return render_template('ind.html' , rec = dm.GetIndicators())

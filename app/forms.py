@@ -15,7 +15,12 @@ class LoginForm(FlaskForm):
     s_name       = TextField("second name" , validators=[DataRequired()])
     t_name       = TextField("third name" , validators=[DataRequired()])
 
-    priv_value   = SelectField("pivilege" , choices=['admin' , 'methodist' , 'gaupthman'] , validators=[DataRequired()])
+    category = SelectField('Category', choices=[
+                                                ("admin", "админ"),
+                                                ("methodist", "методист"), 
+                                                ("gauptman", "заведущий")
+                                                ]
+    )
     
     pass_field   = PasswordField("enter a password" , validators=[DataRequired()])
     pass_repeat  = PasswordField("repeat a password" , validators=[DataRequired()])
