@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="/rate" method="POST" novalidate>
+    <p>
+        {{ rform.iin_text.label }} <br>
+        {{ rform.iin_text }}
+    </p>
+    <p>
+        {{ rform.btn_sbt }}
+    </p>
+</form>
+{% endblock %}

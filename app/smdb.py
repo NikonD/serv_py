@@ -37,8 +37,11 @@ class DataManage():
         curs.execute("UPDATE ")
         conn.commit()
 
-    def LoadTeacherInfoBuIin(self):
-        print()
+    def LoadTeacherInfoBuIin(self , IIN):
+        conn = psql.connect(dsn)
+        curs = conn.cursor()
+        curs.execute("SELECT val_rate ,rate.id_teacher , sname_t  ,fname_t , season.date_season  , indicator.name_ind  , indicator_group.name_group_ind FROM rate , teachers  , season  , indicator , indicator_group   WHERE  teachers.iin_teacher='971209350492'  AND  rate.id_teacher = teachers.id_teacher AND rate.id_indicator = indicator.id_indicator AND indicator.id_group_ind = indicator_group.id_group_ind;")
+        return curs.fetchall()
 
     def GetPassword(self , username):
         conn = psql.connect(dsn)

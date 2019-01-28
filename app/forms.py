@@ -6,7 +6,7 @@ class LoginForm(FlaskForm):
     btn_sbt     = SubmitField("OK" , validators=[DataRequired])
     
     text = TextField("логин", validators=[DataRequired()])
-    iin_key_text = TextField("iin" , validators=[DataRequired()])
+    iin_text = TextField("ИИН" , validators=[DataRequired()])
     f_name       = TextField("first name" , validators=[DataRequired()])
     s_name       = TextField("second name" , validators=[DataRequired()])
     t_name       = TextField("third name" , validators=[DataRequired()])

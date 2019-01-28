@@ -42,7 +42,9 @@ def login():
             flash('wrong')
     return render_template("login.html" , rform=LoginForm())
 
-@app.route('/indicator')
-def ind():
-    r = dm.GetIndicators()
-    return render_template('ind.html' , rec = dm.GetIndicators())
+@app.route('/rate')
+def rate():
+    if request.method == 'POST':
+        iin_val = request.form['iin_text']
+        
+    return render_template('rate.html' , rform=LoginForm())
