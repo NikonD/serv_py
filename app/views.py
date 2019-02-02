@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from flask import url_for
 from flask import Flask, flash, redirect, render_template, request, session, abort , escape
 from app import app
@@ -42,9 +43,17 @@ def login():
             flash('wrong')
     return render_template("login.html" , rform=LoginForm())
 
-@app.route('/rate')
+@app.route('/rate' , methods=['GET' , 'POST'])
 def rate():
+    iin_val=''
+    record= []
     if request.method == 'POST':
         iin_val = request.form['iin_text']
-        
-    return render_template('rate.html' , rform=LoginForm())
+        '''
+            хер какая то
+            нужно пилить нармальные структуры
+        '''
+
+        record = dm.LoadTeacherInfoBuIin(iin_val)
+        record = record[0]
+    return render_template('rate.html' , rform=LoginForm() , records = record)
