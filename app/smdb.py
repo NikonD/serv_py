@@ -1,15 +1,16 @@
 import psycopg2
 from psycopg2.extras import DictCursor
+from app.QueryFactory import QF
 dsn = "dbname='jojo' user='postgres' host='localhost' password='0905nikon' port='5432'"
 psql = psycopg2
 dcurs= DictCursor
-
+qf=QF()
 class DataManage():
 
     def ShowAll(self):
         conn = psql.connect(dsn)
         curs = conn.cursor()
-        curs.execute("SELECT * FROM select_all")
+        curs.execute(qf.select_all())
         return curs.fetchall()
 
 
@@ -37,31 +38,10 @@ class DataManage():
         curs.execute("UPDATE ")
         conn.commit()
 
-    def LoadTeacherInfoBuIin(self , IIN):
+    def GetTeacherRateByIin(self , IIN):
         conn = psql.connect(dsn)
-        curs = conn.cursor(cursor_factory=DictCursor)
-        curs.execute('''SELECT 
-                        val_rate ,
-                        rate.id_teacher , 
-                        sname_t  ,fname_t , 
-                        season.date_season , 
-                        indicator.name_ind ,
-                        indicator_group.name_group_ind 
-                     FROM  
-                        rate ,
-                        teachers , 
-                        season , 
-                        indicator , 
-                        indicator_group    
-                    WHERE 
-                        teachers.iin_teacher=%s   
-                    AND   
-                        rate.id_teacher = teachers.id_teacher  
-                    AND 
-                        rate.id_indicator = indicator.id_indicator  
-                    AND  
-                        indicator.id_group_ind = indicator_group.id_group_ind'''
-                    , (IIN ,))
+        curs = conn.cursor()
+        curs.execute(qf.get_teacher_rate_by_iin(IIN))
         return curs.fetchall()
 
     def GetPassword(self , username):

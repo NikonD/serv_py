@@ -50,10 +50,8 @@ def rate():
     if request.method == 'POST':
         iin_val = request.form['iin_text']
         '''
-            хер какая то
+            херь какая то
             нужно пилить нармальные структуры
         '''
-
-        record = dm.LoadTeacherInfoBuIin(iin_val)
-        record = record[0]
-    return render_template('rate.html' , rform=LoginForm() , records = record)
+        record = dm.GetTeacherRateByIin(iin_val)
+    return render_template('rate.html' , rform=LoginForm() , records = record )
