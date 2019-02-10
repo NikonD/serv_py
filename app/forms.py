@@ -18,7 +18,7 @@ class LoginForm(FlaskForm):
     category = SelectField('Category', choices=[
                                                 ("admin", "админ"),
                                                 ("methodist", "методист"), 
-                                                ("gauptman", "заведущий")
+                                                ("gauptman", "заведующий")
                                                 ]
     )
     

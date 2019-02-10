@@ -45,8 +45,8 @@ def login():
 
 @app.route('/rate' , methods=['GET' , 'POST'])
 def rate():
-    iin_val=''
-    record= []
+    iin_val =''
+    record = []
     if request.method == 'POST':
         iin_val = request.form['iin_text']
         '''
