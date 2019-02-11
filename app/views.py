@@ -55,3 +55,7 @@ def rate():
         '''
         record = dm.GetTeacherRateByIin(iin_val)
     return render_template('rate.html' , rform=LoginForm() , records = record )
+
+@app.route('/edit' , methods=['GET' , 'POST'])
+def edit():
+    return render_template("edit.html" , frorm=LoginForm())
