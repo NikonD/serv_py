@@ -30,3 +30,11 @@ class QF():
                         rate.id_indicator = indicator.id_indicator  
                     AND  
                         indicator.id_group_ind = indicator_group.id_group_ind''' % iin
+
+    def set_password_for_man_person(self , password):
+        return '''
+
+        '''
+
+    def add_man_person(self , group , login , password , privileges):
+        print("hello\n")
