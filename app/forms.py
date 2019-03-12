@@ -3,9 +3,10 @@ from wtforms import TextField , BooleanField , PasswordField , SelectField , Sub
 from wtforms.validators import DataRequired
 
 class LoginForm(FlaskForm):
-    btn_sbt     = SubmitField("OK" , validators=[DataRequired()])    
-    text         = TextField("логин", validators=[DataRequired(message="login incorrect")])
-    iin_text     = TextField("ИИН" , validators=[DataRequired()])
+    btn_sbt     = SubmitField("OK" , validators=[DataRequired])
+    
+    text = TextField("логин", validators=[DataRequired()])
+    iin_text = TextField("ИИН" , validators=[DataRequired()])
     f_name       = TextField("first name" , validators=[DataRequired()])
     s_name       = TextField("second name" , validators=[DataRequired()])
     t_name       = TextField("third name" , validators=[DataRequired()])
@@ -14,7 +15,7 @@ class LoginForm(FlaskForm):
     s_name       = TextField("second name" , validators=[DataRequired()])
     t_name       = TextField("third name" , validators=[DataRequired()])
 
-    category     = SelectField('Category', choices=[
+    category = SelectField('Category', choices=[
                                                 ("admin", "админ"),
                                                 ("methodist", "методист"), 
                                                 ("gauptman", "заведующий")

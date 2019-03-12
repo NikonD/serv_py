@@ -47,6 +47,7 @@ def login():
 def rate():
     iin_val =''
     record = []
+    info = dm.GetIINs()
     if request.method == 'POST':
         iin_val = request.form['iin_text']
         '''
@@ -54,8 +55,9 @@ def rate():
             нужно пилить нармальные структуры
         '''
         record = dm.GetTeacherRateByIin(iin_val)
-    return render_template('rate.html' , rform=LoginForm() , records = record )
+    return render_template('rate.html' , rform=LoginForm() , records = record , info = info)
 
-@app.route('/edit' , methods=['GET' , 'POST'])
-def edit():
-    return render_template("edit.html" , frorm=LoginForm())
+@app.route('/inds')
+def inds():
+    info = dm.GetIndicators()
+    return render_template("inds.html" , info = info)

@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<table class="table">	
+{% for row in info %}
+ <tr> 
+ 	{% for col in row %}
+ 	<td> {{ col }} </td>
+ 	{% endfor %}
+ </tr>
+{% endfor %}
+</table>
+
 <form action="/rate" method="POST" novalidate>
     <p>
         {{ rform.iin_text.label }} <br>
@@ -10,8 +21,14 @@
     </p>
 </form>
 
-{% for r in records %}
-<p> {{ r }}</p>
+<table class="table">	
+{% for row in records %}
+ <tr> 
+ 	{% for col in row %}
+ 	<td> {{ col }} </td>
+ 	{% endfor %}
+ </tr>
 {% endfor %}
+</table>
 
 {% endblock %}

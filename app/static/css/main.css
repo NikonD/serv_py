@@ -1,3 +1,36 @@
-p {
-    text-align: left;
+* {
+	padding: 5px;
+}
+
+body {
+	background-color: #BFCA8C;
+    font-family: 'ubuntu' , sans-serif;	
+}
+
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+
+.her {
+	background-color: #3F4D67;
+	color: #ddd;
+}
+
+.her a {
+	color: #ddd;
+	text-decoration: none;
+	font-style: bold;
+	margin: 5px 2px;
+	position: inherit;
+}
+
+.her a:hover {
+	background-color: #5E6E8A;
+}
+
+form {
+	align-content: center;
 }
