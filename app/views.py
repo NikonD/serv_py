@@ -9,7 +9,7 @@ import argon2
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
-
+title = ""
 
 @app.route('/')
 @app.route('/index')
@@ -17,12 +17,12 @@ def index():
     if 'username' in session:
         her = dm.ShowAll()
         return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
-    return render_template('index.html' , user='You are not logged in')
+    return render_template('index.html' , user='You are not logged in' , title='home')
 
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
     rfrm=LoginForm()
-    return render_template("signup.html" , rform=rfrm )
+    return render_template("signup.html" , rform=rfrm , title='sign up')
 
 @app.route('/logout')
 def logout():
@@ -39,9 +39,9 @@ def login():
                 session['username'] = user
                 return redirect(url_for('index'))
         except argon2.exceptions.VerifyMismatchError:
-            print('wrong password')
+            print('wrong password\n')
             flash('wrong')
-    return render_template("login.html" , rform=LoginForm())
+    return render_template("login.html" , rform=LoginForm() , title='login')
 
 @app.route('/rate' , methods=['GET' , 'POST'])
 def rate():
@@ -55,9 +55,9 @@ def rate():
             нужно пилить нармальные структуры
         '''
         record = dm.GetTeacherRateByIin(iin_val)
-    return render_template('rate.html' , rform=LoginForm() , records = record , info = info)
+    return render_template('rate.html' , rform=LoginForm() , records = record , info = info , title='show rate')
 
 @app.route('/inds')
 def inds():
     info = dm.GetIndicators()
-    return render_template("inds.html" , info = info)
+    return render_template("inds.html" , info = info , title='Indicators')

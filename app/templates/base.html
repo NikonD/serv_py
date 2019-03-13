@@ -1,41 +1,45 @@
 <html>
   <head>
     {% if title %}
-    <title>{{title}} - microblog</title>
+    <title>{{title}} - PSEK.Rate</title>
     {% else %}
-    <title>microblog</title>
+    <title>PSEK.Rate</title>
     {% endif %}
     <link href="static/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="her">
+    <div class="container-fluid">
+      <div class="her">
       rate system: user info / breadcrumbs
     </div>
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/index">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/rate">show Rate</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/signup">Sign up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Log Out</a>
-      </li>
-      <li class="nav-item alert-dark">
-        <a class="nav-link" href="/inds">Indicators</a>
-      </li>
-    </ul>
-    <hr>
-    <div class="alert alert-dark" role="alert">
-      dev bransh
+    <div class="row">
+      <div class="col-md col-xs col-sm col">
+        <ul class="nav bg-dark">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/rate">show Rate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/signup">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/logout">Log Out</a>
+          </li>
+          <li class="nav-item alert-dark">
+            <a class="nav-link text-dark" href="/inds">Indicators</a>
+          </li>
+        </ul>
+      </div>
     </div>
+    
+    <hr>
+    <div class="alert alert-dark" role="alert">dev branch</div>
     <div class="content">
       {% block content %} {% endblock %}
     </div>
@@ -44,6 +48,7 @@
     </div>
     <div class="sign_up">
       {% block sign_up %}{% endblock  %}
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
