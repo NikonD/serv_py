@@ -3,7 +3,7 @@ from psycopg2.extras import DictCursor
 from app.QueryFactory import QF
 
 dsn_web = "dbname='d9mcvnqqvv6qhr' user='dbdhjqxibocegm' host='ec2-176-34-113-195.eu-west-1.compute.amazonaws.com' password='a775c39e8b11b8b3a0c28a18a7b48aa2ba843588c0f754eadc75207cb626e7c8' port='5432'"
-dsn = "dbname='jojo' user='postgres' host='localhost' password='0905nikon' port='5432'"
+dsn = "dbname='rate_system' user='postgres' host='localhost' password='jojodio' port='5432'"
 psql = psycopg2
 dcurs= DictCursor
 qf=QF()
@@ -14,8 +14,7 @@ class DataManage():
         curs = conn.cursor()
         curs.execute(qf.select_all())
         return curs.fetchall()
-
-
+                                                          
     def AddRecord(self , data):
         conn = psql.connect(dsn_web)
         curs = conn.cursor()

@@ -12,3 +12,5 @@
 ./rate_system/bin/pip3 install flup
 ./rate_system/bin/pip3 install psycopg2
 ./rate_system/bin/pip3 install psycopg2-binary
+./rate_system/bin/pip3 install beautifulsoup4
+./rate_system/bin/pip3 install argon2-cffi

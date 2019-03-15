@@ -3,10 +3,11 @@
 from flask import url_for
 from flask import Flask, flash, redirect, render_template, json , request, session, abort , escape
 from app import app
-from app.forms import LoginForm 
+from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 import argon2
 import os
+# from bs4 import BeautifulSoup
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
@@ -23,7 +24,9 @@ def index():
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
     rfrm=LoginForm()
-    return render_template("signup.html" , rform=rfrm , title='sign up')
+    sfrm=Forms()
+    sfrm.init()
+    return render_template("signup.html" , rform=rfrm  , sform=sfrm  , title='sign up')
 
 @app.route('/logout')
 def logout():
@@ -72,6 +75,10 @@ def get_len():
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
-    # html_text = os.open('').read()
-    return json.dumps({'content': "<h1>Hello</h1><button align=center>her morzhoviy</button>"})
-    # return json.dumps({'content': html_text})
+    #f = os.open('templates/edit.html' , 'r')
+    #html_text = f.read()
+    #print(html_text)
+    srt = ''
+    # soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
+    return render_template("get_data.html" , var="var_in_template")
+    #return json.dumps({'content': html_text})

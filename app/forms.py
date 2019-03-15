@@ -20,3 +20,11 @@ class LoginForm(FlaskForm):
     pass_field   = PasswordField("enter a password" , validators=[DataRequired()])
     pass_repeat  = PasswordField("repeat a password" , validators=[DataRequired()])
     pas          = PasswordField("password", validators=[DataRequired()])
+
+
+class Forms(FlaskForm):
+    select = SelectField('slect' , validators=[DataRequired()])
+
+    def init(self):
+        self.select.choices=[('her_val' , 'her_text') , ('some_val' , 'some_text')]
+        

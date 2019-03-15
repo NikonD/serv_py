@@ -2,26 +2,24 @@
 {% block sign_up %}
     <h1>Sign Up</h1>
     <form action="" method="POST" novalidate>
-        <p>
-            {{ rform.category.label }} </br>
+        
+            {{ rform.category.label }}
             {{ rform.category }}
 
-        </p>
-        <p>
-            {{ rform.text.label }} <br>
+        
+            {{ rform.text.label }} 
             {{ rform.text }}
-        </p>
-        <p>
-            {{ rform.pass_field.label }} <br>
+        
+            {{ rform.pass_field.label }} 
             {{ rform.pass_field }}
-        </p>
-        <p>
-            {{ rform.pass_repeat.label }} <br>
+        
+            {{ rform.pass_repeat.label }} 
             {{ rform.pass_repeat }}
-        </p>
-        <p>
+        
             {{ rform.btn_sbt }}
-        </p>
+
+            {{ sform.select.label }}
+            {{ sform.select }}
     </form>
 {% endblock %}
 
