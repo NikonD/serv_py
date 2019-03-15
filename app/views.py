@@ -72,6 +72,8 @@ def get_len():
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
-    # html_text = os.open('').read()
-    return json.dumps({'content': "<h1>Hello</h1><button align=center>her morzhoviy</button>"})
-    # return json.dumps({'content': html_text})
+    f = os.open('templates/edit.html' , 'r')
+    html_text = f.read()
+    print(html_text)
+    # return json.dumps({'content': "<h1>Hello</h1><button align=center>her morzhoviy</button>"})
+    return json.dumps({'content': html_text})

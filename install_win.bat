@@ -12,3 +12,4 @@ rate_system\Scripts\pip.exe install flask-babel
 rate_system\Scripts\pip.exe install flup
 rate_system\Scripts\pip.exe install psycopg2
 rate_system\Scripts\pip.exe install psycopg2-binary
+rate_system\Scripts\pip install beautifulsoup4
