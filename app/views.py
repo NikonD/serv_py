@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from flask import url_for
-from flask import Flask, flash, redirect, render_template, request, session, abort , escape
+from flask import Flask, flash, redirect, render_template, json , request, session, abort , escape
 from app import app
 from app.forms import LoginForm 
 from app.smdb import DataManage
 import argon2
+import os
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
@@ -61,3 +62,16 @@ def rate():
 def inds():
     info = dm.GetIndicators()
     return render_template("inds.html" , info = info , title='Indicators')
+
+@app.route('/get_len' , methods=['GET' , 'POST'])
+def get_len():
+    if request.method == 'POST':
+        name = request.form['name'];
+    print(name)
+    return json.dumps({'len': len(name) + len(name)})
+
+@app.route('/get_inds' , methods=['GET' , 'POST'])
+def get_inds():
+    # html_text = os.open('').read()
+    return json.dumps({'content': "<h1>Hello</h1><button align=center>her morzhoviy</button>"})
+    # return json.dumps({'content': html_text})

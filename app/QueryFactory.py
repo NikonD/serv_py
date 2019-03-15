@@ -9,7 +9,7 @@ class QF():
                 '''
 
     def get_teacher_rate_by_iin(self,iin):
-        return '''SELECT 
+        return   '''SELECT 
                         val_rate ,
                         rate.id_teacher , 
                         sname_t  ,fname_t , 
