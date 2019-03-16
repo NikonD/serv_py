@@ -7,6 +7,7 @@ from app.forms import LoginForm
 from app.smdb import DataManage
 import argon2
 import os
+from bs4 import BeautifulSoup
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
@@ -72,8 +73,10 @@ def get_len():
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
-    f = os.open('templates/edit.html' , 'r')
-    html_text = f.read()
-    print(html_text)
-    # return json.dumps({'content': "<h1>Hello</h1><button align=center>her morzhoviy</button>"})
-    return json.dumps({'content': html_text})
+    #f = os.open('templates/edit.html' , 'r')
+    #html_text = f.read()
+    #print(html_text)
+    srt = ''
+    soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
+    return render_template("get_data.html" , var="var_in_template")
+    #return json.dumps({'content': html_text})

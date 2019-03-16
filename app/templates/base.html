@@ -69,9 +69,10 @@
         type: "POST",
         url: "/get_inds",
         data: $('form').serialize(),
+        dataType: "html",
         success: function(response) {
-          var json = jQuery.parseJSON(response)
-          $('#len').html(json.content);
+          var html_temp = jQuery.parseHTML(response)
+          $('#len').html(html_temp);
         }, 
         error: function(error) {
           console.log(error);
@@ -85,7 +86,7 @@
     <input type="button" value="Отправить" onclick="get_len();">
     <input type="button" value="Indicators" onclick="get_inds();">
 </form>
-<div class="row" id="len"></div>
+<div class="row" id="len">{% block ht %} {% endblock %}</div>
     <div class="alert alert-dark" role="alert">dev branch</div>
     <div class="content">
       {% block content %} {% endblock %}
