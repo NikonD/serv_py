@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed9beb9-9c19-4f78-848f-838314e85f2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/py.py" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\other.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\serv_py.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\testrunner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\.idea\workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/QueryFactory.py" afterPath="$PROJECT_DIR$/app/QueryFactory.py" />
@@ -11,6 +20,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin_add.py" afterPath="$PROJECT_DIR$/admin_add.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base2.html" afterPath="$PROJECT_DIR$/app/templates/base2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/edit.html" afterPath="$PROJECT_DIR$/app/templates/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms.py" afterPath="$PROJECT_DIR$/app/forms.py" />
@@ -21,6 +31,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/install_win.bat" afterPath="$PROJECT_DIR$/install_win.bat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/login.html" afterPath="$PROJECT_DIR$/app/templates/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/main.css" afterPath="$PROJECT_DIR$/app/static/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/py.py" afterPath="$PROJECT_DIR$/py.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/rate.html" afterPath="$PROJECT_DIR$/app/templates/rate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/reg.html" afterPath="$PROJECT_DIR$/app/templates/reg.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
@@ -78,9 +89,10 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="20" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+            <state line="29" column="20" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#25#50#0" expanded="true" />
+                <marker date="1552968793227" expanded="true" signature="2835:2950" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -398,9 +410,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+        <state line="29" column="20" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#25#50#0" expanded="true" />
+            <marker date="1552968793227" expanded="true" signature="2835:2950" placeholder="..." />
           </folding>
         </state>
       </provider>
