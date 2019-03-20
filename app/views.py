@@ -7,11 +7,9 @@ from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 import argon2
 import os
-<<<<<<< HEAD
-# from bs4 import BeautifulSoup
-=======
-from bs4 import BeautifulSoup
->>>>>>> 94f2eaa7fdc01fe7c27c6a4d35cd2baf2f3aee0f
+#import bs4
+
+
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
@@ -83,10 +81,8 @@ def get_inds():
     #html_text = f.read()
     #print(html_text)
     srt = ''
-<<<<<<< HEAD
     # soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
-=======
-    soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
->>>>>>> 94f2eaa7fdc01fe7c27c6a4d35cd2baf2f3aee0f
+
+    #soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
     return render_template("get_data.html" , var="var_in_template")
     #return json.dumps({'content': html_text})
