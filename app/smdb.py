@@ -14,8 +14,7 @@ class DataManage():
         curs = conn.cursor()
         curs.execute(qf.select_all())
         return curs.fetchall()
-
-
+                                                          
     def AddRecord(self , data):
         conn = psql.connect(dsn)
         curs = conn.cursor()
