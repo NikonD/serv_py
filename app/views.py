@@ -86,3 +86,8 @@ def get_inds():
     #soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
     return render_template("get_data.html" , var="var_in_template")
     #return json.dumps({'content': html_text})
+
+@app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
+def get_data_for_diag():
+    #запилть отправку данных по преподавателю - группа индикаторов и рейтинг
+    return render_template("rate.html" , inds ='dsd')

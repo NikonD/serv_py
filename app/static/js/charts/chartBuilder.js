@@ -1,3 +1,20 @@
+
+function getIndsAndRate() {
+    JQuery.ajax({
+        type: "POST",
+        url: "/get_data_for_diag",
+        success: function(response) {
+            var data = response;
+            console.log(data);
+            return data;
+        },
+        error: function(error) {
+            console.log(error);
+        }
+     });
+
+}
+
 function build_chart_by_query() {
     var marksCanvas = document.getElementById("marksChart");
 
