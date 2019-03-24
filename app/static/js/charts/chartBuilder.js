@@ -76,8 +76,8 @@ function build_chart_by_query() {
     };
 
     var radarChart = new Chart(marksCanvas, {
-    type: 'radar',
-    data: marksData,
-    options: chartOptions
+        type: 'radar',
+        data: marksData,
+        options: chartOptions
     });    
 }
