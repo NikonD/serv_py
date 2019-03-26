@@ -7,9 +7,7 @@ from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 import argon2
 import os
-#import bs4
-
-
+import bs4
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
@@ -71,7 +69,7 @@ def inds():
 @app.route('/get_len' , methods=['GET' , 'POST'])
 def get_len():
     if request.method == 'POST':
-        name = request.form['name'];
+        name = request.form['name']
     print(name)
     return json.dumps({'len': len(name) + len(name)})
 
@@ -80,9 +78,13 @@ def get_inds():
     #f = os.open('templates/edit.html' , 'r')
     #html_text = f.read()
     #print(html_text)
-    srt = ''
     # soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
 
     #soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
     return render_template("get_data.html" , var="var_in_template")
     #return json.dumps({'content': html_text})
+
+@app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
+def get_data_for_diag():
+    #запилть отправку данных по преподавателю - группа индикаторов и рейтинг
+    return render_template("rate.html" , inds ='dsd')
