@@ -1,0 +1,11 @@
+[-] - select diagram type
+[-] - select diagram theme
+[-] - add/remove rate records
+[-] - add/remove indicator records
+[-] - add/remove group indicator records
+[-] - delimitation of rights
+[-] - sign up
+[-] - guest mode
+[-] - manager mode
+[-] - admin panel
+[-] - different teacher
