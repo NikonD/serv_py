@@ -7,7 +7,6 @@ from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 import argon2
 import os
-import bs4
 
 dm = DataManage()
 hs = argon2.PasswordHasher()
