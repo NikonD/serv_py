@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed9beb9-9c19-4f78-848f-838314e85f2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/names.txt" />
+      <change type="DELETED" beforePath="D:\buf\serv_py\py.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
@@ -28,9 +28,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/main.css" afterPath="$PROJECT_DIR$/app/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/names.txt" afterPath="$PROJECT_DIR$/names.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/other.xml" afterPath="$PROJECT_DIR$/.idea/other.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/py.py" afterPath="$PROJECT_DIR$/py.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/rate.html" afterPath="$PROJECT_DIR$/app/templates/rate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/reg.html" afterPath="$PROJECT_DIR$/app/templates/reg.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
@@ -78,7 +78,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="6" selection-start="3824" selection-end="3824" vertical-scroll-proportion="0.0">
+            <state line="103" column="6" selection-start="3824" selection-end="3824" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -122,18 +122,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="53" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1554203939671" expanded="true" signature="2273:2341" placeholder="..." />
-                <marker date="1554203939671" expanded="true" signature="2427:2481" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="run.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,7 +135,9 @@
         <entry file="file://$PROJECT_DIR$/app/smdb.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="70" column="30" selection-start="2334" selection-end="2334" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1554204289718" expanded="true" signature="470:582" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -271,15 +261,13 @@
               <option name="myItemId" value="serv_py" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="serv_py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="serv_py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="&lt; Python 3.4.3 virtualenv at D:\buf\serv_py\rate_system (1) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -289,28 +277,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="serv_py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serv_py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serv_py" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -571,23 +537,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1554203939671" expanded="true" signature="2273:2341" placeholder="..." />
-            <marker date="1554203939671" expanded="true" signature="2427:2481" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="8" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
@@ -630,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="6" selection-start="3824" selection-end="3824" vertical-scroll-proportion="0.0">
+        <state line="103" column="6" selection-start="3824" selection-end="3824" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
@@ -655,8 +604,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="53" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1554203939671" expanded="true" signature="2273:2341" placeholder="..." />
-            <marker date="1554203939671" expanded="true" signature="2427:2481" placeholder="..." />
+            <marker date="1554203939671" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1554203939671" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -671,13 +620,22 @@
     <entry file="file://$PROJECT_DIR$/app/smdb.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="30" selection-start="2334" selection-end="2334" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1554204289718" expanded="true" signature="470:582" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="23" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python34/DLLs/pyexpat.pyd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.0533981">
           <folding />
         </state>
       </provider>
