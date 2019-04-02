@@ -53,10 +53,6 @@ def rate():
     info = dm.GetIINs()
     if request.method == 'POST':
         iin_val = request.form['iin_text']
-        '''
-            херь какая то
-            нужно пилить нармальные структуры
-        '''
         record = dm.GetTeacherRateByIin(iin_val)
     return render_template('rate.html' , rform=LoginForm() , records = record , info = info , title='show rate')
 
@@ -74,16 +70,8 @@ def get_len():
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
-    #f = os.open('templates/edit.html' , 'r')
-    #html_text = f.read()
-    #print(html_text)
-    # soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
-
-    #soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
     return render_template("get_data.html" , var="var_in_template")
-    #return json.dumps({'content': html_text})
 
 @app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
 def get_data_for_diag():
-    #запилть отправку данных по преподавателю - группа индикаторов и рейтинг
     return render_template("rate.html" , inds ='dsd')

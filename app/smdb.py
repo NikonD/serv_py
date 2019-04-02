@@ -9,9 +9,13 @@ dcurs= DictCursor
 qf=QF()
 class DataManage():
 
-    def ShowAll(self):
+    def Connect(self):
         conn = psql.connect(dsn_web)
-        curs = conn.cursor()
+        curs = conn.cursor(cursor_factory=DictCursor)
+        return  curs
+
+    def ShowAll(self):
+        curs = self.Connect()
         curs.execute(qf.select_all())
         return curs.fetchall()
                                                           
@@ -22,14 +26,12 @@ class DataManage():
         conn.commit()
     
     def GetIDTeacherByIIN(self , iin):
-        conn =psql.connect(dsn_web)
-        curs = conn.cursor(cursor_factory=DictCursor)
+        curs = self.Connect()
         curs.execute("SELECT id_teacher FROM teachers WHERE iin_teacher = %s " , (iin,))
         return curs.fetchall()[0][0]
     
     def GetAllRecordsByTable(self , table ):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor(cursor_factory=DictCursor)
+        curs = self.Connect()
         curs.execute("SELECT * FROM "+table)
         return curs.fetchall()
 
@@ -40,14 +42,12 @@ class DataManage():
         conn.commit()
 
     def GetTeacherRateByIin(self , IIN):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor()
+        curs = self.Connect()
         curs.execute(qf.get_teacher_rate_by_iin(IIN))
         return curs.fetchall()
 
     def GetPassword(self , username):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor(cursor_factory=DictCursor)
+        curs = self.Connect()
         curs.execute("SELECT password FROM manage_persons WHERE login= %s" , (username,))
         return curs.fetchall()[0][0].strip()
 
@@ -55,20 +55,17 @@ class DataManage():
         print()
 
     def GetRateByTeacher(self , id_teach):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor(cursor_factory=DictCursor)
+        curs = self.Connect()
         curs.execute("SELECT val_rate , id_indicator FROM rate WHERE id_teacher = %s" ,(id_teach,))
         return curs.fetchall()
 
     #dev
     def GetIndicators(self):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor()
+        curs = self.Connect()
         curs.execute("SELECT * From indicator")
         return curs.fetchall()
     #dev
     def GetIINs(self):
-        conn = psql.connect(dsn_web)
-        curs = conn.cursor()
+        curs = self.Connect()
         curs.execute("SELECT * From teachers")
         return curs.fetchall()

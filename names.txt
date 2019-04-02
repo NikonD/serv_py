@@ -1,0 +1,17 @@
+base.html
+    head.html(<head></head>)
+        тут всякие подключения js css и тд
+    body.html(<body></body>)
+        header
+            строка поиска ,  уведомления , юзер меню.
+        left panel
+            собственно менюха вся
+        content
+            тут и так понятно блоки для диаграмм, таблиц, всяких данных.
+            edit_panel.html (для ролей админа , методиста , заведующего)
+                indicator_edit.html
+                rate_edit.html
+            view_data.html
+                для гостя и других ролей отдельно
+                guest_view.html
+                manager_view.html
