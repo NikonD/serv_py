@@ -8,6 +8,8 @@ from app.smdb import DataManage
 import argon2
 import os
 
+# TODO deviate by date
+
 dm = DataManage()
 hs = argon2.PasswordHasher()
 title = ""

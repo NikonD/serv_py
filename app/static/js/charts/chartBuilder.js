@@ -6,7 +6,7 @@ function getIndsAndRate() {
         success: function(response) {
             var data = response;
             console.log(data);
-            return data;
+//            return data;
         },
         error: function(error) {
             console.log(error);
