@@ -5,6 +5,7 @@
 [-] - add/remove group indicator records
 [-] - delimitation of rights
 [-] - sign up
+[-] - sign in
 [-] - guest mode
 [-] - manager mode
 [-] - admin panel

@@ -15,3 +15,14 @@ base.html
                 для гостя и других ролей отдельно
                 guest_view.html
                 manager_view.html
+
+
+login
+    init
+    /login
+    redirect
+        index or login_wrong_password
+
+        index
+            init template by role
+            init function by role

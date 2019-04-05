@@ -4,7 +4,7 @@
     <h1>Sign In</h1>
     <div class="login-form">
     {% if error_login %}
-        <div class="alert alert-danger">Wrong password</div>
+        {{ error_login }}
     {% endif %}
     <form action="/login" method="POST" novalidate>
         <p>

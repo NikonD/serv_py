@@ -6,11 +6,14 @@ from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 from app.view_indicators import show_indiators
+from app.UsersModel import USER , s_name
 import argon2
 import os
 
 # TODO deviate by date
-
+# usr = USER()
+# s_name['u_role'] = 11
+# print(s_name)
 dm = DataManage()
 hs = argon2.PasswordHasher()
 title = ""
@@ -48,7 +51,6 @@ def login():
         except argon2.exceptions.VerifyMismatchError:
             print('wrong password\n')
             flash('wrong')
-            return  render_template("login.html" , rform=LoginForm() , title='login' , error_login="wrong password")
     return render_template("login.html" , rform=LoginForm() , title='login')
 
 @app.route('/rate' , methods=['GET' , 'POST'])
