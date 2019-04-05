@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, json , request, sessi
 from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
+from app.view_indicators import show_indiators
 import argon2
 import os
 
@@ -20,7 +21,8 @@ def index():
     if 'username' in session:
         her = dm.ShowAll()
         return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
-    return render_template('index.html' , user='You are not logged in' , title='home')
+    # return render_template('index.html' , user='You are not logged in' , title='home')
+    return redirect(url_for('login'))
 
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
@@ -46,6 +48,7 @@ def login():
         except argon2.exceptions.VerifyMismatchError:
             print('wrong password\n')
             flash('wrong')
+            return  render_template("login.html" , rform=LoginForm() , title='login' , error_login="wrong password")
     return render_template("login.html" , rform=LoginForm() , title='login')
 
 @app.route('/rate' , methods=['GET' , 'POST'])
@@ -58,10 +61,12 @@ def rate():
         record = dm.GetTeacherRateByIin(iin_val)
     return render_template('rate.html' , rform=LoginForm() , records = record , info = info , title='show rate')
 
-@app.route('/inds')
-def inds():
-    info = dm.GetIndicators()
-    return render_template("inds.html" , info = info , title='Indicators')
+# @app.route('/inds')
+# def inds():
+#     info = dm.GetIndicators()
+#     return render_template("inds.html" , info = info , title='Indicators')
+
+
 
 @app.route('/get_len' , methods=['GET' , 'POST'])
 def get_len():
@@ -77,3 +82,5 @@ def get_inds():
 @app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
 def get_data_for_diag():
     return render_template("rate.html" , inds ='dsd')
+
+

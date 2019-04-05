@@ -1,13 +1,13 @@
 from flask_wtf import FlaskForm
 from wtforms import TextField , BooleanField , PasswordField , SelectField , SubmitField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired , Email
 
 # TODO create forms for each page and task
 # TODO create methods for initializations forms and filed on role
 
 class LoginForm(FlaskForm):
     btn_sbt     = SubmitField("OK" , validators=[DataRequired()])
-    text         = TextField("логин"       , validators=[DataRequired()])
+    text         = TextField("логин"       , validators=[DataRequired() , Email()])
     iin_text     = TextField("ИИН"          , validators=[DataRequired()])
     f_name       = TextField("first name"   , validators=[DataRequired()])
     s_name       = TextField("second name"  , validators=[DataRequired()])
