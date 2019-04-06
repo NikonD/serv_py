@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, json , request, sessi
 from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
+
 import argon2
 import os
 import bs4
