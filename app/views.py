@@ -6,10 +6,17 @@ from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 
+
+from app.view_indicators import show_indiators
+from app.UsersModel import USER , s_name
+
 import argon2
 import os
-import bs4
 
+# TODO deviate by date
+# usr = USER()
+# s_name['u_role'] = 11
+# print(s_name)
 dm = DataManage()
 hs = argon2.PasswordHasher()
 title = ""
@@ -20,7 +27,8 @@ def index():
     if 'username' in session:
         her = dm.ShowAll()
         return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
-    return render_template('index.html' , user='You are not logged in' , title='home')
+    # return render_template('index.html' , user='You are not logged in' , title='home')
+    return redirect(url_for('login'))
 
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
@@ -55,17 +63,15 @@ def rate():
     info = dm.GetIINs()
     if request.method == 'POST':
         iin_val = request.form['iin_text']
-        '''
-            херь какая то
-            нужно пилить нармальные структуры
-        '''
         record = dm.GetTeacherRateByIin(iin_val)
     return render_template('rate.html' , rform=LoginForm() , records = record , info = info , title='show rate')
 
-@app.route('/inds')
-def inds():
-    info = dm.GetIndicators()
-    return render_template("inds.html" , info = info , title='Indicators')
+# @app.route('/inds')
+# def inds():
+#     info = dm.GetIndicators()
+#     return render_template("inds.html" , info = info , title='Indicators')
+
+
 
 @app.route('/get_len' , methods=['GET' , 'POST'])
 def get_len():
@@ -76,16 +82,10 @@ def get_len():
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
-    #f = os.open('templates/edit.html' , 'r')
-    #html_text = f.read()
-    #print(html_text)
-    # soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
-
-    #soup = BeautifulSoup(open("app/templates/get_data.html"), "html.parser")
     return render_template("get_data.html" , var="var_in_template")
-    #return json.dumps({'content': html_text})
 
 @app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
 def get_data_for_diag():
-    #запилть отправку данных по преподавателю - группа индикаторов и рейтинг
     return render_template("rate.html" , inds ='dsd')
+
+

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 function getIndsAndRate() {
     JQuery.ajax({
         type: "POST",
@@ -83,3 +84,6 @@ function build_chart_by_query() {
         options: chartOptions
     });    
 }
+=======
+// TODO: Write diagram builder
+>>>>>>> 347c06ebfe0b6078a8965d76353baae95e75c461
