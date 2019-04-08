@@ -1,11 +1,22 @@
 class QF():
-    
-    def select_all(self):
+
+    def get_teachers_by_manager_teachers_id(self , manager_teacgers_id):
         return '''
                 SELECT
-                    *
-                FROM
-                    select_all
+				teachers_second_name,
+				manage_persons_login
+			FROM
+				teachers,
+				manage_persons
+			WHERE
+				manage_persons_id='%s'
+				AND
+				teachers_group_id=manage_persons_id 
+                ''' % manager_teachers_id
+
+    def select_all(self):
+        return '''
+                
                 '''
 
     def get_teacher_rate_by_iin(self,iin):

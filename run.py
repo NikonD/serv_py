@@ -1,4 +1,4 @@
-#!rate_system/Scripts/python.exe
+#!rate_system/bin/python3
 
 from app import app
 
