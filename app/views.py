@@ -6,12 +6,14 @@ from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 from app.view_indicators import show_indiators
-from app.UsersModel import USER , s_name
+from app.UsersModel import USER , s_name , manage_persons_struct
 import argon2
 import os
 
 # TODO deviate by date
-# usr = USER()
+usr = USER()
+# usr.value =1
+# print()
 # s_name['u_role'] = 11
 # print(s_name)
 dm = DataManage()
@@ -22,8 +24,8 @@ title = ""
 @app.route('/index')
 def index():
     if 'username' in session:
-        her = dm.ShowAll()
-        return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , rec=her)
+        # her = dm.ShowAll()
+        return render_template('index.html' , user='Logged in as %s' % escape(session['username']) , her="it is work")
     # return render_template('index.html' , user='You are not logged in' , title='home')
     return redirect(url_for('login'))
 
@@ -45,7 +47,7 @@ def login():
     if request.method == 'POST':
         user = request.form['text']
         try:
-            if hs.verify(dm.GetPassword(user) , request.form['pas']):
+            if hs.verify(dm.GetManagePersonsInfo(user)['manage_persons_password'] , request.form['pas']):
                 session['username'] = user
                 return redirect(url_for('index'))
         except argon2.exceptions.VerifyMismatchError:
@@ -61,7 +63,7 @@ def rate():
     if request.method == 'POST':
         iin_val = request.form['iin_text']
         record = dm.GetTeacherRateByIin(iin_val)
-    return render_template('rate.html' , rform=LoginForm() , records = record , info = info , title='show rate')
+    return render_template('rate.html' , rform=LoginForm() , records = record , info = info  , title='show rate')
 
 # @app.route('/inds')
 # def inds():

@@ -31,5 +31,14 @@
 {% endfor %}
 </table>
 
+<table class="table">
+{% for row in dates %}
+    <tr>
+    {% for col in row %}
+    <td> {{ col }} </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
 
 {% endblock %}
