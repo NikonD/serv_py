@@ -6,7 +6,7 @@
     {% if error_login %}
         {{ error_login }}
     {% endif %}
-    <form action="/login" method="POST" novalidate>
+    <form action="/login_ajax" id="login-form" method="post" novalidate>
         <p>
             {{ rform.text.label }}<br>
             {{ rform.text }}
@@ -17,7 +17,7 @@
             {{ rform.pas }}
         </p>
         <p>
-            {{ rform.btn_sbt }}
+            {{ rform.btn_sbt onclick="login()" }}
         </p>
     </form>
     </div>
