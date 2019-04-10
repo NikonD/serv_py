@@ -1,12 +1,12 @@
-{% extends "base.html" %}
-{% block content %}
+
 <div class="head-content">
     <H1>MAIN PAGE</H1>
 </div>
-
-    <div class="row">
+    <h2>{{ user }}</h2>
+    <div class="r">
         <div class="col-xs-12 col-md-12 col-sm-12 col-xs-12">
-            <p> {{ her }} </p>
+            {% for row in records %}
+                <p> {{ row }} </p>
+            {% endfor %}
         </div>
     </div>
-{% endblock %}

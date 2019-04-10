@@ -36,13 +36,17 @@ class QF():
     def get_teachers_and_rate_value_by_manager_teachers(self , id_mp  ,id_season):
     	return '''
     			SELECT
-				  teachers.teachers_second_name , teachers.teachers_id , rate.rate_value , rate.rate_indicator_id , indicator.indicator_name
+				  teachers.teachers_second_name ,
+				  teachers.teachers_id ,
+				  rate.rate_value ,
+				  rate.rate_indicator_id ,
+				  indicator.indicator_name
 				FROM
 				  teachers
 				INNER JOIN
 				  manage_persons
 				ON
-				  manage_persons.manage_persons_id='%s'
+				  manage_persons.manage_persons_login='%s'
 				  AND
 				  teachers.teachers_group_id = manage_persons.manage_persons_id
 				INNER JOIN

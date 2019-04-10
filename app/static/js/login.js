@@ -15,6 +15,7 @@ function login() {
         success: function(response) {
             var html_temp = jQuery.parseHTML(response)
             $('.content').html(html_temp);
+
         }
     });
 }

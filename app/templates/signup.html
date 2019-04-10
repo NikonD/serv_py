@@ -1,25 +1,9 @@
-{% extends "base.html" %}
-{% block sign_up %}
+{% extends "bases/base.html" %}
+{% block content %}
     <h1>Sign Up</h1>
     <form action="" method="POST" validate>
         
-            {{ rform.category.label }}
-            {{ rform.category }}
-
-        
-            {{ rform.text.label }} 
-            {{ rform.text }}
-        
-            {{ rform.pass_field.label }} 
-            {{ rform.pass_field }}
-        
-            {{ rform.pass_repeat.label }} 
-            {{ rform.pass_repeat }}
-        
-            {{ rform.btn_sbt }}
-
-            {{ sform.select.label }}
-            {{ sform.select }}
+        {{ rform.select }}
     </form>
 {% endblock %}
 

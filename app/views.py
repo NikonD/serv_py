@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import url_for
-from flask import Flask, flash, redirect, render_template, json , request, session, abort , escape
+from flask import Flask ,flash, redirect, render_template, json , request, session, abort , escape
 from app import app
 from app.forms import LoginForm , Forms
 from app.smdb import DataManage
@@ -11,8 +11,8 @@ import argon2
 import os
 
 # TODO deviate by date
-#usr = USER()
-# usr.value =1
+# usr = USER()
+# usr.value = 1
 # print()
 # s_name['u_role'] = 11
 # print(s_name)
@@ -43,15 +43,15 @@ def index():
     if 'username' in session:
         # her = dm.ShowAll()
         return render_template('index.html' , user='Logged in as %s' % escape(session['username']))
+        records = dm.GetTeachersByManagePerson()
     # return render_template('index.html' , user='You are not logged in' , title='home')
-    return redirect(url_for('login'))
+    return render_template('login.html' , user='You are not logged in' , rform=LoginForm())
 
 @app.route('/signup' , methods=['GET' , 'POST'])
 def reg_m_person():
-    rfrm=LoginForm()
-    sfrm=Forms()
-    sfrm.init()
-    return render_template("signup.html" , rform=rfrm  , sform=sfrm  , title='sign up')
+    rfrm=Forms()
+    rfrm.init()
+    return render_template("signup.html" , rform=rfrm  , title='sign up')
 
 @app.route('/logout')
 def logout():
@@ -73,6 +73,10 @@ def rate():
 #     info = dm.GetIndicators()
 #     return render_template("inds.html" , info = info , title='Indicators')
 
+@app.route('/set_rate')
+def set_rate():
+    return render_template('set_rate.html')
+
 
 
 @app.route('/get_len' , methods=['GET' , 'POST'])
@@ -92,18 +96,19 @@ def get_data_for_diag():
 
 @app.route('/login_ajax' , methods=['GET' , 'POST'])
 def login_ajax():
+    manage_persons_struct = {}
     if request.method == 'POST':
         login = request.form['text']
         password = request.form['pas']
-        print(login + " " + password)
         try:
             if hs.verify(dm.GetManagePersonsInfo(login)['manage_persons_password'] , password):
                 session['username'] = login
-                return render_template("index.html")
+                manage_persons_struct  = dm.GetManagePersonsInfo(login)
+                records=dm.GetTeachersByManagePerson(manage_persons_struct['manage_persons_login'] , '2')
+                return render_template("index.html" ,records=records, user='Logged in as %s' % escape(session['username']))
         except argon2.exceptions.VerifyMismatchError:
             print('wrong password in ajax\n')
             flash('wrong')
     return render_template("login.html" , rform=LoginForm() , title='login')
-
 
 

@@ -75,7 +75,7 @@ class DataManage():
     #dev
     def GetTeachersByManagePerson(self , id_mp , id_season):
         curs = self.Connect()
-        curs.execute(QF.get_teachers_and_rate_value_by_manager_teachers(id_mp,id_season))
+        curs.execute(QF.get_teachers_and_rate_value_by_manager_teachers(self ,id_mp , id_season))
         return curs.fetchall()
     #dev
     def JOIN(self):
