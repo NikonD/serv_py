@@ -10,7 +10,7 @@ qf=QF()
 class DataManage():
 
     def Connect(self):
-        conn = psql.connect(dsn_web)
+        conn = psql.connect(dsn)
         curs = conn.cursor(cursor_factory=DictCursor)
         return  curs
 
