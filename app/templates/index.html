@@ -1,23 +1,12 @@
-{% extends "base.html" %}
-{% block content %}
+
 <div class="head-content">
     <H1>MAIN PAGE</H1>
 </div>
-
-    <div class="row">
+    <h2>{{ user }}</h2>
+    <div class="r">
         <div class="col-xs-12 col-md-12 col-sm-12 col-xs-12">
-            <table class="table sorted" cellpadding=5 cellspacing="0">
-                <tr>
-                    <th>Рейтинг</th><th>id учителя</th><th>Фамилия</th><th>Имя</th><th>Сезон</th><th>Критерий</th><th>Группа критерия</th>
-                </tr>
-                {% for r in rec %}
-                    <tr>
-                    {% for i in r %}
-                        <td> {{ i }} </td>
-                    {% endfor%}
-                    </tr>
-                {% endfor %}
-            </table>
+            {% for row in records %}
+                <p> {{ row }} </p>
+            {% endfor %}
         </div>
     </div>
-{% endblock %}

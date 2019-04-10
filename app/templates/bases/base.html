@@ -30,7 +30,7 @@
             <a class="nav-link text-white" href="/signup">Sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="/login">Login</a>
+            <a class="nav-link text-white" href="/login_ajax">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="/logout">Log Out</a>
@@ -43,7 +43,7 @@
     </div>
     
     <hr>
-    <h2>{{ user }}</h2>
+
 <script>
     function get_len() {
         console.log(jQuery.ajax);
@@ -86,6 +86,11 @@
     <input type="button" value="Отправить" onclick="get_len();">
     <input type="button" value="Indicators" onclick="get_inds();">
 </form>
+    <style>
+        .h1 {
+            border: 1px solid #169c14;
+        }
+    </style>
 <div class="row" id="len">{% block ht %} {% endblock %}</div>
     <div class="alert alert-dark" role="alert">dev branch</div>
     <div class="content">
@@ -100,12 +105,12 @@
 
     </div>
     <!--<canvas class="bg-dark col-md-6 col-sm-6" id="marksChart" width="360" height="240" onclick="build_chart_by_query()"></canvas>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script type="text/javascript" src="/static/js/charts/chartBuilder.js"></script>
 
-{#    <canvas class="bg-dark" id="marksChart" width="360" height="240" onclick="getIndsAndRate()"></canvas>#}
+    {#    <canvas class="bg-dark" id="marksChart" width="360" height="240" onclick="getIndsAndRate()"></canvas>#}
     </div>
+    {#    <script type="text/javascript" src="/static/js/charts/chartBuilder.js"></script>#}
+    <script type="text/javascript" src="static/js/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 {#    <script type="text/javascript" src="/static/js/charts/chartBuilder.js"></script>#}
-
   </body>
 </html>
