@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
-        <h2>ggg</h2>
-    </body>
-</html>
+{% extends 'bases/base.html' %}
+{% block content %}
+<h1>what</h1>
+<div class="row">
+<form method="GET" id="login-form" class="form col-md-2 col-sm-2" action="#">
+    {{ form.login }}
+    {{ form.password }}
+    {{ form.button }}
+</form>
+</div>
+
+{% endblock %}
