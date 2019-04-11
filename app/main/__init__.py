@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-bp = Blueprint('main', __name__)
+app = Blueprint('main', __name__)
 
-from app.auth import routes
+# from app.auth import views

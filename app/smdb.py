@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2.extras import DictCursor
 from app.QueryFactory import QF
-from app.UsersModel import manage_persons_struct
+from app.models import manage_persons_struct
 
 dsn_web = "dbname='d9mcvnqqvv6qhr' user='dbdhjqxibocegm' host='ec2-176-34-113-195.eu-west-1.compute.amazonaws.com' password='a775c39e8b11b8b3a0c28a18a7b48aa2ba843588c0f754eadc75207cb626e7c8' port='5432'"
 dsn = "dbname='rate_system' user='postgres' host='localhost' password='jojodio' port='5432'"
