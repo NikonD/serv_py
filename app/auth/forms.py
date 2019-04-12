@@ -36,4 +36,4 @@ class LoginForm(FlaskForm):
     password = PasswordField('password')
     sbt  = SubmitField('button')
     btn  = Field(label='ok_lol' , widget=SubmitField)
-    button = Markup('<button>ok)))</button>')
+    button = Markup('<input onclick="login_gen();" value="ok" type="button" id="submit">')

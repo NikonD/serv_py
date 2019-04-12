@@ -2,7 +2,7 @@
 {% block content %}
 <h1>what</h1>
 <div class="row">
-<form method="GET" id="login-form" class="form col-md-2 col-sm-2" action="#">
+<form method="POST" id="login-form" class="form col-md-2 col-sm-2" action="/login">
     {{ form.login }}
     {{ form.password }}
     {{ form.button }}

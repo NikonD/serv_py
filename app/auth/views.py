@@ -13,16 +13,27 @@ from app.auth.forms import LoginForm
 
 @auth_module.route('/gen_key' , methods=['GET' , 'POST'])
 def gen_key():
-    if request.method == 'GET':
-        ckey=request.values['key']
-        print(ckey)
+    ckey=request.values['key']
+    print(ckey)
     return render_template('auth/login.html' , form=LoginForm())
+
+
+@app.route('/get_inds' , methods=['GET' , 'POST'])
+def get_inds():
+    ckey = request.values['key']
+    print(ckey)
+    return render_template("get_data.html" , var="var_in_template")
 
 @auth_module.route('/login' , methods=['GET' , 'POST'])
 def login():
     if request.method == 'POST':
-        login = request.form['login']
-        password = request.form['password']
-        print(login)
-        print(password)
-    return render_template('auth/login.html' , form=LoginForm())
+        p = request.values
+        print(p['login'])
+        return render_template('index.html')
+    else:
+        return render_template('auth/login.html' , form=LoginForm())
+
+@auth_module.route('/log_ajax')
+def log():
+    print('что тут не так....')
+    return render_template('index.html')

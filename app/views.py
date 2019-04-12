@@ -86,9 +86,7 @@
 #     print(name)
 #     return json.dumps({'len': len(name) + len(name)})
 #
-# @app.route('/get_inds' , methods=['GET' , 'POST'])
-# def get_inds():
-#     return render_template("get_data.html" , var="var_in_template")
+
 #
 # @app.route('/get_data_for_diag' , methods=['GET' , 'POST'])
 # def get_data_for_diag():
