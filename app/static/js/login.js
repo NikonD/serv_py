@@ -28,11 +28,9 @@ function get_key() {
     jQuery.ajax({
         url: '/gen_key',
         type:'POST',
-        data: 'key='+ckey,
+        data: 'key='+SHA256(ckey.toString()),
         success: function(response) {
-            console.log(response);
-            var html_temp = jQuery.parseHTML(response);
-            $('body').html(html_temp);
+            return response;
         }
     });
 }
@@ -41,7 +39,7 @@ function login() {
    jQuery.ajax({
         type: 'POST',
         url: '/login',
-        data: 'login='+$('#login').val()+"&password="+$('#password').val(),
+        data: 'login='+$('#login').val(),
         dataType: 'html',
         success: function(response) {
             console.log(response);
@@ -53,7 +51,9 @@ function login() {
 }
 
 function login_gen() {
-    get_key();
+    if (get_key() == "done") {
+        alert("ke");
+    }
     login();
 }
 

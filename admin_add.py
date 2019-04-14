@@ -1,7 +1,8 @@
 #!rate_system/Scripts/python.exe
 import argon2
 import psycopg2
-arg = argon2.PasswordHasher()
+
+arg = argon2.PasswordHasher(hash_len=256 ,time_cost=10 ,memory_cost=100000)
 str = "sagitov"
 s = arg.hash(str)
 print(s)

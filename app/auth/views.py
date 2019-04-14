@@ -15,8 +15,8 @@ from app.auth.forms import LoginForm
 def gen_key():
     ckey=request.values['key']
     print(ckey)
-    return render_template('auth/login.html' , form=LoginForm())
-
+    # return render_template('auth/login.html' , form=LoginForm())
+    return "done"
 
 @app.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
