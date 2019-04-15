@@ -2,9 +2,9 @@
 {% block content %}
 <h1>what</h1>
 <div class="row">
-<form method="POST" id="login-form" class="form col-md-2 col-sm-2" action="/login">
+<form method="POST" id="login-form" class="form col-md-4 col-sm-4" action="/login">
     {{ form.login }}
-    {{ form.password }}
+    <label>{{ form.password }}{% if err %}{{ err }}{% endif %}</label>
     {{ form.button }}
 </form>
 </div>
