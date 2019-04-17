@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a70435-7e63-4860-963a-92367e9464a9" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/QueryFactory.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/database/smdb.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/roles/usermodel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/serv_py.iml" afterPath="$PROJECT_DIR$/.idea/serv_py.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/QueryFactory.py" afterPath="$PROJECT_DIR$/app/QueryFactory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/QueryFactory.py" afterPath="$PROJECT_DIR$/app/database/QueryFactory.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO.txt" afterPath="$PROJECT_DIR$/TODO.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/__init__.py" afterPath="$PROJECT_DIR$/app/api/__init__.py" />
@@ -40,6 +40,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/roles/admin/edit_teachers.html" afterPath="$PROJECT_DIR$/app/templates/roles/admin/edit_teachers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/roles/head_teacher/edit_teachers.html" afterPath="$PROJECT_DIR$/app/templates/roles/head_teacher/edit_teachers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/roles/admin/edit_users.html" afterPath="$PROJECT_DIR$/app/templates/roles/admin/edit_users.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/forms/exemple_form.html" afterPath="$PROJECT_DIR$/app/templates/forms/exemple_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/auth/forms.py" afterPath="$PROJECT_DIR$/app/auth/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/forms.py" afterPath="$PROJECT_DIR$/app/forms/forms.py" />
@@ -53,29 +54,40 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/main.css" afterPath="$PROJECT_DIR$/app/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/main.js" afterPath="$PROJECT_DIR$/app/static/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/microblog.log" afterPath="$PROJECT_DIR$/logs/microblog.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/names.txt" afterPath="$PROJECT_DIR$/names.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/rate.html" afterPath="$PROJECT_DIR$/app/templates/rate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/reg.html" afterPath="$PROJECT_DIR$/app/templates/reg.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/structs/roles.json" afterPath="$PROJECT_DIR$/app/static/structs/roles.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/set_rate.html" afterPath="$PROJECT_DIR$/app/templates/set_rate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/sha256.js" afterPath="$PROJECT_DIR$/app/static/js/sha256.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/signup.html" afterPath="$PROJECT_DIR$/app/templates/signup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/smdb.py" afterPath="$PROJECT_DIR$/app/smdb.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/smdb.py" afterPath="$PROJECT_DIR$/app/database/smdb.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/structs.py" afterPath="$PROJECT_DIR$/app/structs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/testrunner.xml" afterPath="$PROJECT_DIR$/.idea/testrunner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/roles/usermodel.py" afterPath="$PROJECT_DIR$/app/roles/usermodel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/guest/view.html" afterPath="$PROJECT_DIR$/app/templates/guest/view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view_indicators.py" afterPath="$PROJECT_DIR$/app/view_indicators.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view_test.py" afterPath="$PROJECT_DIR$/app/view_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/auth/views.py" afterPath="$PROJECT_DIR$/app/auth/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/errors/views.py" afterPath="$PROJECT_DIR$/app/errors/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mail/views.py" afterPath="$PROJECT_DIR$/app/mail/views.py" />
-      <change type="MOVED" beforePath="D:\buf\serv_py\app\database\views.py" afterPath="$PROJECT_DIR$/app/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main/views.py" afterPath="$PROJECT_DIR$/app/main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <file path="/Dummy.txt" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555315614125" ignored="false" />
+    <file path="/Dummy.txt" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555496224218" ignored="false" />
     <file path="/__init__.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555317619765" ignored="false" />
     <file path="/models.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555316883734" ignored="false" />
-    <file path="/views.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555316403031" ignored="false" />
+    <file path="/views.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555497651390" ignored="false" />
     <file path="/run.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1554958808906" ignored="false" />
     <file path="/config.py" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1554971767703" ignored="false" />
     <file path="/login.html" changelist="77a70435-7e63-4860-963a-92367e9464a9" time="1555303998546" ignored="false" />
@@ -107,10 +119,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/auth/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="44" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
+            <state line="59" column="51" selection-start="2161" selection-end="2184" vertical-scroll-proportion="0.915">
               <folding />
             </state>
           </provider>
@@ -120,9 +132,7 @@
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="35" column="51" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,8 +140,10 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="31" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="19" column="29" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,9 +152,7 @@
         <entry file="file://$PROJECT_DIR$/app/view_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="2" column="12" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,17 +170,15 @@
         <entry file="file://$PROJECT_DIR$/app/view_indicators.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="19" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smdb.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="smdb.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/smdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="8" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.43441227">
+            <state line="81" column="29" selection-start="2666" selection-end="2666" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -181,7 +189,7 @@
       <file leaf-file-name="signup.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -241,11 +249,11 @@
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/roles/usermodel.py" />
         <option value="$PROJECT_DIR$/app/view_test.py" />
-        <option value="$PROJECT_DIR$/app/auth/views.py" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/app/view_indicators.py" />
         <option value="$PROJECT_DIR$/app/smdb.py" />
+        <option value="$PROJECT_DIR$/app/auth/views.py" />
       </list>
     </option>
   </component>
@@ -281,6 +289,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,20 +342,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.templateLanguages.TemplateLanguageModulesConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="com.jetbrains.python.templateLanguages.TemplateLanguageModulesConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/run.py" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -416,22 +424,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="$PROJECT_DIR$/rate_system/Scripts/python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="serv_py" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="browserUrl" value="http://127.0.0.1:5000/" />
-      <option name="additionalOptions" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -454,21 +446,20 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="true" type="Python.AppEngineServer" factoryName="App Engine server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
+      <envs />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/rate_system/Scripts/python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="serv_py" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="browserUrl" value="http://127.0.0.1:5000/" />
+      <option name="additionalOptions" value="" />
       <method />
     </configuration>
     <configuration default="true" type="docs" factoryName="Docutils task">
@@ -489,6 +480,23 @@
       <option name="docutils_open_in_browser" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="serv_py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="docs" factoryName="Sphinx task">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -505,6 +513,19 @@
       <option name="docutils_params" value="" />
       <option name="docutils_task" value="" />
       <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
+      <module name="" />
+      <option name="PORT" value="0" />
+      <option name="HOST" value="null" />
+      <PathMappingSettings>
+        <option name="pathMappings">
+          <list />
+        </option>
+      </PathMappingSettings>
+      <option name="REDIRECT_OUTPUT" value="true" />
+      <option name="SUSPEND_AFTER_CONNECT" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -528,19 +549,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyRemoteDebugConfigurationType" factoryName="Python Remote Debug">
-      <module name="" />
-      <option name="PORT" value="0" />
-      <option name="HOST" value="null" />
-      <PathMappingSettings>
-        <option name="pathMappings">
-          <list />
-        </option>
-      </PathMappingSettings>
-      <option name="REDIRECT_OUTPUT" value="true" />
-      <option name="SUSPEND_AFTER_CONNECT" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -672,7 +680,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.7359813" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20907618" sideWeight="0.75584114" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21231766" sideWeight="0.75584114" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -772,9 +780,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="31" selection-start="1362" selection-end="1388" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="42" column="31" selection-start="1362" selection-end="1388" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/bases/base.html">
@@ -801,31 +807,13 @@
     <entry file="file://$PROJECT_DIR$/app/view_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/auth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="44" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/QueryFactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="41" selection-start="2034" selection-end="2034" vertical-scroll-proportion="1.7283334">
-          <folding />
-        </state>
+        <state line="61" column="41" selection-start="2034" selection-end="2034" vertical-scroll-proportion="1.7283334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/signup.html">
@@ -838,8 +826,15 @@
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="51" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/smdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="29" selection-start="2666" selection-end="2666" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -847,18 +842,23 @@
     <entry file="file://$PROJECT_DIR$/app/view_indicators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="19" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="29" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/smdb.py">
+    <entry file="file://$PROJECT_DIR$/app/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="8" selection-start="2248" selection-end="2248" vertical-scroll-proportion="0.43441227">
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state line="59" column="51" selection-start="2161" selection-end="2184" vertical-scroll-proportion="0.915">
+          <folding />
         </state>
       </provider>
     </entry>
