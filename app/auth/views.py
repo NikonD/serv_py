@@ -57,7 +57,8 @@ def login():
 
 @app.route('/logout')
 def logout():
-    session.pop('username' , manage_persons['login'])
+    session.pop('username' , None)
+    manage_persons.pop('login' , None)
     return render_template('auth/login.html' , form=LoginForm())
 
 @auth_module.route('/log_ajax')
