@@ -49,7 +49,7 @@ def login():
                 print(row)
             # print(manage_persons['login'])
             # TODO goto in gen_functions by privileges
-            return render_template('index.html')
+            return render_template('index.html' , user= session['username'])
         else:
             return render_template('auth/login.html' , form=LoginForm() , err="wrong password")
     else:
@@ -58,7 +58,6 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username' , None)
-    manage_persons.pop('login' , None)
     return render_template('auth/login.html' , form=LoginForm())
 
 @auth_module.route('/log_ajax')
