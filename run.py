@@ -1,4 +1,4 @@
-#!rate_system/Scripts/python.exe
+#!rate_system/bin/python
 
 from app import app
 # from app.auth import app

@@ -35,12 +35,23 @@ function login() {
         data: 'login='+$('#login').val()+'&password='+$('#password').val()+'&ckey='+SHA256(get_key().toString()),
         dataType: 'html',
         success: function(response) {
-            console.log(response);
+//            console.log(response);
             var html_temp = jQuery.parseHTML(response);
             $('body').html(html_temp);
         }
     });
 
+}
+function logout() {
+    jQuery.ajax({
+        type:   'POST',
+        url:    '/exit',
+        dataType: 'html',
+        success: function(response) {
+            var html_temp = jQuery.parseHTML(response);
+            $('body').html(html_temp);
+        }
+    });
 }
 
 function login_gen() {

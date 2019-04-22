@@ -22,7 +22,7 @@ dm = DataManager()
 #     # return render_template('auth/login.html' , form=LoginForm())
 #     return "done"
 
-@app.route('/get_inds' , methods=['GET' , 'POST'])
+@auth_module.route('/get_inds' , methods=['GET' , 'POST'])
 def get_inds():
     # ckey = request.values['key']
     # print(ckey)
@@ -33,7 +33,7 @@ def somee():
     return '<p>somee</p>'
 
 
-@app.route('/login' , methods=['GET' , 'POST'])
+@auth_module.route('/login' , methods=['GET' , 'POST'])
 def login():
     if request.method == 'POST':
         p = request.values
@@ -49,15 +49,16 @@ def login():
                 print(row)
             # print(manage_persons['login'])
             # TODO goto in gen_functions by privileges
-            return render_template('index.html' , user= session['username'])
+            return redirect(url_for('roles' , user= session['username']))
         else:
             return render_template('auth/login.html' , form=LoginForm() , err="wrong password")
     else:
         return render_template('auth/login.html' , form=LoginForm())
 
-@app.route('/logout')
+@auth_module.route('/exit' , methods=['GET' , 'POST'])
 def logout():
-    session.pop('username' , None)
+    if request.method == 'POST':
+        session.pop('username' , None)
     return render_template('auth/login.html' , form=LoginForm())
 
 @auth_module.route('/log_ajax')

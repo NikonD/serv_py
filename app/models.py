@@ -31,7 +31,7 @@ def index():
             # TODO goto in gen_functions by privileges
             return redirect(url_for('roles' , user=session['username']))
         else:
-            print('wrong')
+            print('wrong\033[33m')
             return render_template('auth/login.html' , form=LoginForm() , err="wrong password")
     return render_template('auth/login.html' , form=LoginForm())
 

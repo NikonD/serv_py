@@ -32,8 +32,8 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="/login">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/logout">Log Out</a>
+          <li class="nav-item alert-warnning">
+            <a class="nav-link text-white" onclick="logout();">Log Out</a>
           </li>
           <li class="nav-item alert-dark">
             <a class="nav-link text-dark" href="/inds">Indicators</a>
@@ -83,7 +83,7 @@
 <form action="/get_len" method="post" name="form">
     <label for="name">Введите текст:</label>
     <input id="name" name="name" type="text">
-    <input type="button" value="Отправить" onclick="get_len();">
+    <input type="button" value="Отправить" onclick="logout();">
     <input type="button" value="Indicators" onclick="get_inds();">
 </form>
     <style>
@@ -111,7 +111,7 @@
         <script type="text/javascript" src="/static/js/sha256.js"></script>
 
     {#    <script type="text/javascript" src="/static/js/charts/chartBuilder.js"></script>#}
-    <script type="text/javascript" src="static/js/login.js"></script>
+    <script type="text/javascript" src="/static/js/login.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 {#    <script type="text/javascript" src="/static/js/charts/chartBuilder.js"></script>#}
   </body>
