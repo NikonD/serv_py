@@ -1,7 +1,6 @@
 from flask import url_for
 from flask import Flask, flash, redirect, render_template, json , request, session, abort , escape
 from app import app
-from app.forms import LoginForm , Forms
 from app.smdb import DataManage
 
 dm = DataManage()

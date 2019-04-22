@@ -6,6 +6,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config(object):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:///dbdhjqxibocegm:a775c39e8b11b8b3a0c28a18a7b48aa2ba843588c0f754eadc75207cb626e7c8@ec2-176-34-113-195.eu-west-1.compute.amazonaws.com/d9mcvnqqvv6qhr'
     CSRF = 'her'
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')

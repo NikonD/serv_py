@@ -23,23 +23,16 @@
 
 
 function get_key() {
-    var ckey = Math.round(Math.random()*Math.pow(10,16));
+    ckey = Math.round(Math.random() * Math.pow(10, 16));
     alert(ckey);
-    jQuery.ajax({
-        url: '/gen_key',
-        type:'POST',
-        data: 'key='+SHA256(ckey.toString()),
-        success: function(response) {
-            return response;
-        }
-    });
+    return ckey;
 }
 
 function login() {
    jQuery.ajax({
         type: 'POST',
         url: '/login',
-        data: 'login='+$('#login').val(),
+        data: 'login='+$('#login').val()+'&password='+$('#password').val()+'&ckey='+SHA256(get_key().toString()),
         dataType: 'html',
         success: function(response) {
             console.log(response);
@@ -51,9 +44,6 @@ function login() {
 }
 
 function login_gen() {
-    if (get_key() == "done") {
-        alert("ke");
-    }
     login();
 }
 
