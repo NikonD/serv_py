@@ -37,6 +37,9 @@ app.register_blueprint(api_bp, url_prefix='/api')
 from app.database import app as db_bp
 app.register_blueprint(db_bp)
 
+from app.signup import sigup_module as su_bp
+app.register_blueprint(su_bp , url_prefix='/')
+
 from app import models , view_test ,view_indicators
 from app.auth import views
 from app.main import views

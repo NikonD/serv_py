@@ -2,8 +2,10 @@
 {% block content %}
     <h1>Sign Up</h1>
     <form action="" method="POST" validate>
-        
-        {{ rform.select }}
+        {{ form.login }}
+        {{ form.password }}
+        {{ form.privileges }}
+        {{ form.button }}
     </form>
 {% endblock %}
 

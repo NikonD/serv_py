@@ -8,7 +8,7 @@ dsn = "dbname='rate_system' user='postgres' host='localhost' password='jojodio' 
 psql = psycopg2
 dcurs= DictCursor
 qf  =   QF()
-ph  =   PasswordHasher(time_cost=5)
+ph  =   PasswordHasher(time_cost=5,hash_len=100)
 
 class DataManager():
 
@@ -27,11 +27,27 @@ class DataManager():
         curs.execute(qf.select_all())
         return curs.fetchall()
 
-    def AddRecord(self , data):
+    def user_is_exist(self , log):
+        is_user = False
+        curs = self.Connect()
+        curs.execute("SELECT manage_persons_login FROM manage_persons WHERE manage_persons_login = '%s'" % (log,) )
+        if curs.fetchall():
+            return True
+
+
+    def AddUser(self ,login , password , privileges):
         conn = psql.connect(dsn_web)
         curs = conn.cursor()
-        curs.execute("")
-        conn.commit()
+        if  self.user_is_exist(login):
+            print('user is exist')
+            return False
+        #     not add user
+        else:
+            print('user is not exist')
+        #     add user
+            h_password = ph.hash(password)
+            curs.execute(qf.add_user_in_manage_persons(login,h_password,privileges))
+            conn.commit()
 
     def GetIDTeacherByIIN(self , iin):
         curs = self.Connect()

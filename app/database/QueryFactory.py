@@ -7,6 +7,22 @@ class QF():
                     select_all
                 '''
 
+
+    def add_user_in_manage_persons(self , log , pswd , prvg):
+        return '''
+            INSERT INTO
+                manage_persons(
+                    manage_persons_login ,
+                    manage_persons_password ,
+                    manage_persons_priv_value
+                )
+                VALUES (
+                    '%s' ,
+                    '%s' ,
+                    '%s'
+                )
+        ''' % (log , pswd , prvg)
+
     # TODO fix query get_teacher_rate_by_iin() add condition for date
     def get_teacher_rate_by_iin(self,iin):
         return '''SELECT
