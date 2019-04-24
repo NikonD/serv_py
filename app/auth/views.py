@@ -1,4 +1,3 @@
-from flask import render_template, redirect, url_for, flash, request
 import jinja2
 from flask import render_template, redirect, url_for, flash, request
 from flask_babel import _
