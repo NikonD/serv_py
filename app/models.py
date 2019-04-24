@@ -11,8 +11,10 @@ from app.auth.forms import LoginForm
 from app.roles.usermodel import manage_persons
 from app.database.smdb import DataManager
 from flask import render_template ,redirect
-from app import app , session , db
+from app import app , session
 from app.auth.forms import FlaskForm
+from app.roles.usermodel import manage_persons
+from app.roles.getpage import manage_persons_page
 
 dm = DataManager()
 
@@ -37,4 +39,4 @@ def index():
 
 @app.route('/roles/<user>')
 def roles(user):
-    return render_template('roles/admin/main.html' , user=user)
+    return render_template(manage_persons_page(manage_persons['privileges']) , user=user)

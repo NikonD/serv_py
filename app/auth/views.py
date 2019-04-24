@@ -13,7 +13,6 @@ from app.auth.forms import LoginForm
 from app.database.smdb import DataManager
 from app.roles.usermodel import manage_persons ,list_user
 
-
 dm = DataManager()
 # @auth_module.route('/gen_key' , methods=['GET' , 'POST'])
 # def gen_key():
@@ -31,7 +30,6 @@ def get_inds():
 @app.route('/somee')
 def somee():
     return '<p>somee</p>'
-
 
 @auth_module.route('/login' , methods=['GET' , 'POST'])
 def login():
@@ -58,6 +56,7 @@ def login():
 @auth_module.route('/exit' , methods=['GET' , 'POST'])
 def logout():
     if request.method == 'POST':
+        manage_persons.clear()
         session.pop('username' , None)
     return render_template('auth/login.html' , form=LoginForm())
 
