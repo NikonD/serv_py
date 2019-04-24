@@ -1,9 +1,9 @@
 from flask import url_for
 from flask import Flask, flash, redirect, render_template, json , request, session, abort , escape
 from app import app
-from app.smdb import DataManage
+from app.database.smdb import DataManager
 
-dm = DataManage()
+dm = DataManager()
 
 @app.route('/inds')
 def show_indiators():

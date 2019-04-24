@@ -20,14 +20,14 @@
     <div class="row">
       <div class="col-md col-xs col-sm col">
         <ul class="nav bg-dark">
+{#          <li class="nav-item">#}
+{#            <a class="nav-link text-white" href="/index">Home</a>#}
+{#          </li>#}
+{#          <li class="nav-item">#}
+{#            <a class="nav-link text-white" href="/rate">show Rate</a>#}
+{#          </li>#}
           <li class="nav-item">
-            <a class="nav-link text-white" href="/index">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/rate">show Rate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/signup">Sign up</a>
+            <a class="nav-link text-white"  onclick="signup();">Sign up</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="/login">Login</a>
@@ -83,7 +83,6 @@
 <form action="/get_len" method="post" name="form">
     <label for="name">Введите текст:</label>
     <input id="name" name="name" type="text">
-    <input type="button" value="Отправить" onclick="logout();">
     <input type="button" value="Indicators" onclick="get_inds();">
 </form>
     <style>
