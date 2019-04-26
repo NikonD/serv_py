@@ -17,6 +17,14 @@ class DataManager():
         curs = conn.cursor()
         return  curs
 
+    def CheckUser(self , username):
+        curs = self.Connect()
+        curs.execute("SELECT * FROM manage_persons WHERE manage_persons_login = '%s'" %(username,))
+        if curs.fetchall():
+            return True
+        else:
+            return False
+
     def GetDate(self):
         curs = self.Connect()
         curs.execute("select * from season")
@@ -33,6 +41,8 @@ class DataManager():
         curs.execute("SELECT manage_persons_login FROM manage_persons WHERE manage_persons_login = '%s'" % (log,) )
         if curs.fetchall():
             return True
+        else:
+            return False
 
 
     def AddUser(self ,login , password , privileges):

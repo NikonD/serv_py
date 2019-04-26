@@ -22,7 +22,7 @@ app.config.from_object(__name__)
 # db = SQLAlchemy(app)
 
 
-from app.errors import app as errors_bp
+from app.errors import errors_module as errors_bp
 app.register_blueprint(errors_bp)
 
 from app.auth import auth_module as auth_bp
@@ -45,4 +45,5 @@ app.register_blueprint(f_bp)
 
 from app import models , view_test ,view_indicators
 from app.auth import views
+
 

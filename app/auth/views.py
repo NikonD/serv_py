@@ -34,8 +34,11 @@ def somee():
 def login():
     if request.method == 'POST':
         p = request.values
+
         print(p['login']+'\n'+p['password']+'\n'+p['ckey'])
         if dm.VerifyPassword(p['login'] , p['password']):
+            session['guest'] = False
+            # session.pop('error_view' , None)
             manage_persons['login']         = p['login']
             manage_persons['ckey']          = p['ckey']
             manage_persons['privileges']    = dm.GetManagePersonsPrivileges(p['login'])
@@ -56,6 +59,7 @@ def login():
 def logout():
     if request.method == 'POST':
         manage_persons.clear()
+        session['guest'] = True
         session.pop('username' , None)
     return render_template('auth/login.html' , form=LoginForm())
 

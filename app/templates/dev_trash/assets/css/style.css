@@ -188,7 +188,8 @@ table.table {
   width: 32px;
 }
 .hamburger .ham {
-  height: 2px;
+  height: 3px;
+  margin-bottom: 5px;
   width: 32px;
   background: #ccc;
   border-radius: 1px;
