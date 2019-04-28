@@ -37,7 +37,7 @@ function login() {
         success: function(response) {
 //            console.log(response);
             var html_temp = jQuery.parseHTML(response);
-            $('body').html(html_temp);
+            $('.content').html(html_temp);
         }
     });
 

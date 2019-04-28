@@ -13,11 +13,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#444444"/>
         <!-- All stylesheets must be placed here -->
-        <link href="./assets/css/reset.css" rel="stylesheet" type="text/css"/>
-        <link href="./assets/css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-        <link href="./assets/font/fontawesome/style.css" rel="stylesheet"/>
+        <link href="static/assets/css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="static/assets/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/assets/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/assets/font/fontawesome/style.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"/>
     </head>
     <body>
@@ -25,20 +25,20 @@
         <div class="menu_collapsed">
             <div class="logo_wrap"><div class="logo"></div></div>
             <ul>
-                <li><a href="#data"><img src="./assets/svg/datagram.svg" alt="Диаграмма">Диаграмма</a></li>
-                <li><a href="#choice"><img src="./assets/svg/star.svg" alt="Выбор">Выбор</a></li>
-                <li><a href="#table"><img src="./assets/svg/table.svg" alt="Таблицы">Таблицы</a></li>
-                <li><a href="#report"><img src="./assets/svg/report2.svg" alt="Отчёт">Отчёт</a></li>
-				<li><a href="#table"><img src="./assets/svg/message.svg" alt="Таблицы">Сообщения</a></li>
+                <li><a href="#data"><img src="static/assets/svg/datagram.svg" alt="Диаграмма">Диаграмма</a></li>
+                <li><a href="#choice"><img src="static/assets/svg/star.svg" alt="Выбор">Выбор</a></li>
+                <li><a href="#table"><img src="static/assets/svg/table.svg" alt="Таблицы">Таблицы</a></li>
+                <li><a href="#report"><img src="static/assets/svg/report2.svg" alt="Отчёт">Отчёт</a></li>
+				<li><a href="#table"><img src="static/assets/svg/message.svg" alt="Таблицы">Сообщения</a></li>
             </ul>
         </div><!-- /menu_collapsed -->
         <!--div class="menu_expanded">
             <div class="logo_wrap"><div class="logo"></div></div>
             <ul>
-                <li><img src="./assets/svg/datagram.svg" alt="Диаграмма"></img>Диаграмма</li>
-                <li><img src="./assets/svg/choice.svg" alt="Выбор"></img>Выбор
-                <li><img src="./assets/svg/table.svg" alt="Таблицы"></img>Таблицы</li>
-                <li><img src="./assets/svg/report.svg" alt="Отчёт"></img>Отчёт</li>
+                <li><img src="static/assets/svg/datagram.svg" alt="Диаграмма"></img>Диаграмма</li>
+                <li><img src="static/assets/svg/choice.svg" alt="Выбор"></img>Выбор
+                <li><img src="static/assets/svg/table.svg" alt="Таблицы"></img>Таблицы</li>
+                <li><img src="static/assets/svg/report.svg" alt="Отчёт"></img>Отчёт</li>
             </ul>
         </div--><!-- /menu_expanded -->
     </div>
@@ -53,7 +53,7 @@
                     </div>
                 </a>
                 <div class="search">
-                    <img src="./assets/svg/search.svg" alt="Поиск"></img>
+                    <img src="static/assets/svg/search.svg" alt="Поиск"></img>
                     <form action="/get_len" method="post" name="form" autocomplete="off" required>
                            <input placeholder="Search" id="name" name="name" type="text">
                     </form>
@@ -74,9 +74,9 @@
             </div>
 			<div class="dropdown">
 				<div class="dropdown_content">
-					<a href="#profile"><img src="./assets/svg/profile.svg" alt="Профиль">Профиль</a>
-					<a href="#settings"><img src="./assets/svg/settings.svg" alt="Настройки">Настройки</a>
-					<a href="#logout"><img src="./assets/svg/logout.svg" alt="Выход">Выход</a>
+					<a href="#profile"><img src="static/assets/svg/profile.svg" alt="Профиль">Профиль</a>
+					<a href="#settings"><img src="static/assets/svg/settings.svg" alt="Настройки">Настройки</a>
+					<a href="#logout"><img src="static/assets/svg/logout.svg" alt="Выход">Выход</a>
 				</div>
 			</div>
         </div>
@@ -84,7 +84,11 @@
         <div class="card datatable">
           <div class="card-body">
             <div class="table-responsive">
-
+                <div class="content">
+                    {% block content %}{% endblock %}
+                    {% block main %}{% endblock %}    
+                </div>
+                
 {#              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">#}
 {#                <thead>#}
 {#                  <tr>#}

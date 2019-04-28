@@ -68,8 +68,6 @@
       jQuery.ajax({
         type: "POST",
         url: "/get_inds",
-{#        data: $('form').serialize(),#}
-{#        dataType: "html",#}
         success: function(response) {
           var html_temp = jQuery.parseHTML(response)
           $('#len').html(html_temp);

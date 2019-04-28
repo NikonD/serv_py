@@ -13,7 +13,7 @@ ph  =   PasswordHasher(time_cost=5,hash_len=100)
 class DataManager():
 
     def Connect(self):
-        conn = psql.connect(dsn_web)
+        conn = psql.connect(dsn)
         curs = conn.cursor()
         return  curs
 
@@ -79,7 +79,7 @@ class DataManager():
         except exceptions.VerifyMismatchError:
             print('wrong password in ajax\n')
             return False
-            
+
     def EditRecord(self , table , index):
         conn = psql.connect(dsn_web)
         curs = conn.cursor()
