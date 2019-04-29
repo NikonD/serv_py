@@ -21,7 +21,6 @@ def get_inds():
 def login():
     if request.method == 'POST':
         p = request.values
-
         print(p['login'] + '\n' + p['password'] + '\n' + p['ckey'])
         if dm.VerifyPassword(p['login'], p['password']):
             session['guest'] = False
@@ -48,6 +47,5 @@ def logout():
     if request.method == 'POST':
         manage_persons.clear()
         session['guest'] = True
-        session.pop('username', None)
     return render_template('auth/index.html', form=LoginForm(), warnning="not in session")
 

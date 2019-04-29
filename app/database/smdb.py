@@ -13,7 +13,7 @@ ph  =   PasswordHasher(time_cost=5,hash_len=100)
 class DataManager():
 
     def Connect(self):
-        conn = psql.connect(dsn)
+        conn = psql.connect(dsn_web)
         curs = conn.cursor()
         return  curs
 

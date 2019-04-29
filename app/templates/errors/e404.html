@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends 'bases/base_main.html' %}
+{% block error %}
     {% if msg %}
     {{ msg }}
     {% endif %}
-</body>
-</html>
+{% endblock %}
