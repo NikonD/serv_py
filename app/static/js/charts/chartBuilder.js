@@ -28,11 +28,10 @@ function getIndsAndRate() {
 //    });
 //}
 function build_chart_by_query(data) {
-
     var diag;
     var marksCanvas = document.getElementById("testdiag");
     diag = new Chart(marksCanvas, {
-        type: 'bar',
+        type: 'pie',
         data: {
             labels: Object.keys(data),
             backgroundColor: "red",
@@ -72,11 +71,15 @@ function load_diagrams() {
         url:  '/load_diagrams',
         dataType: 'json',
         success: function(response){
-//           JSON.parse(response , function( k , v) {
+//           JSON.parse(response , function() {
+//               console.log(response);
+////               return v;
+//           });
+//            parse(response , function( k , v) {
 //                console.log(k);
 //                return true
 //            });
-            console.log(response);
+            console.log(Object.keys(response[0]));
 //            makeDiagram(response);
             build_chart_by_query(response)
         }

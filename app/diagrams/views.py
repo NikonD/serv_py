@@ -21,5 +21,6 @@ def load_diagrams():
             data["val"]=r[1]
             response.append(data)
         # return (json.dumps(rec))
-        return jsonify(dict)
+        print(rec)
+        return jsonify(rec)
     return 0
