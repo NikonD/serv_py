@@ -4,7 +4,7 @@
         <div class="menu_collapsed">
             <div class="logo_wrap"><div class="logo"></div></div>
             <ul>
-                <li><a href="#data"><img src="static/assets/svg/datagram.svg" alt="Диаграмма">Диаграмма</a></li>
+                <li><a onclick="load_diagrams();"><img src="static/assets/svg/datagram.svg" alt="Диаграмма">Диаграмма</a></li>
                 <li><a href="#choice"><img src="static/assets/svg/star.svg" alt="Выбор">Выбор</a></li>
                 <li><a href="#table"><img src="static/assets/svg/table.svg" alt="Таблицы">Таблицы</a></li>
                 <li><a href="#report"><img src="static/assets/svg/report2.svg" alt="Отчёт">Отчёт</a></li>
@@ -64,6 +64,7 @@
         <div class="card datatable">
           <div class="card-body">
           	<div class="main_content">
+                <div class="breadcrumbs"><a class="diactive-link">Главная/</a></div>
 				{% block main %}{% endblock %}
 			</div>
           </div>

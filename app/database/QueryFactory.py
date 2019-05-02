@@ -25,13 +25,13 @@ class QF():
 
     # TODO fix query get_teacher_rate_by_iin() add condition for date
     def get_teacher_rate_by_iin(self,iin):
+        # rate.rate_teacher_id ,
+        #                 teachers.teachers_second_name  ,teachers.teachers_first_name ,
+        #                 season.season_date ,
+        #                 indicator.indicator_name ,
         return '''SELECT
-                        rate.rate_value ,
-                        rate.rate_teacher_id ,
-                        teachers.teachers_second_name  ,teachers.teachers_first_name ,
-                        season.season_date ,
                         indicator.indicator_name ,
-                        indicator_group.indicator_group_name
+                        rate.rate_value
                      FROM
                         rate ,
                         teachers ,

@@ -19,7 +19,6 @@ function load_login() {
         url: '/load_login',
         dataType: 'html',
         success: function(response) {
-            console.log(response);
             var html_temp = jQuery.parseHTML(response);
             $('#body').html(html_temp);
         }

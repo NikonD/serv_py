@@ -11,7 +11,7 @@ dm = DataManager()
 @app.route('/')
 @app.route('/index')
 def index():
-    if 'username' in session:
+    if ('username' in session) and ('privileges' in manage_persons) :
         print(session['username'])
         return render_template(manage_persons_page(manage_persons['privileges']) , user=session['username'])
     else:

@@ -43,7 +43,11 @@ app.register_blueprint(su_bp , url_prefix='/')
 from app.gen_functions import function_module as f_bp
 app.register_blueprint(f_bp)
 
+from app.diagrams import diagram_module as diag_bp
+app.register_blueprint(diag_bp)
+
 from app import models , view_test ,view_indicators
 from app.auth import views
+from app.diagrams import views
 
 

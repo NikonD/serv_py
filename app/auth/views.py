@@ -35,7 +35,7 @@ def login():
                 print(row)
             # print(manage_persons['login'])
             # TODO goto in gen_functions by privileges
-            return redirect(url_for('roles', user=session['username']))
+            return redirect(url_for('index', user=session['username']))
         else:
             return render_template('auth/index.html', form=LoginForm(), err="wrong password")
     else:

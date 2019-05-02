@@ -1,10 +1,12 @@
 import psycopg2
-from psycopg2.extras import DictCursor
+from psycopg2.extras import DictCursor ,RealDictCursor ,RealDictRow
 from app.database.QueryFactory import QF
 from argon2 import PasswordHasher , exceptions
 
-dsn_web = "dbname='d9mcvnqqvv6qhr' user='dbdhjqxibocegm' host='ec2-176-34-113-195.eu-west-1.compute.amazonaws.com' password='a775c39e8b11b8b3a0c28a18a7b48aa2ba843588c0f754eadc75207cb626e7c8' port='5432'"
+dsn_web = "dbname='d1ufc7dp4m125k' user='kzkoadpajawjfo' host='ec2-54-235-114-242.compute-1.amazonaws.com' password='5bcd5e361babc3229beac6b0e6a2c7c509b7a576360dc7281806ab7744daf98b' port='5432'"
 dsn = "dbname='rate_system' user='postgres' host='localhost' password='jojodio' port='5432'"
+dsn_web2 = "dbname='d8qqm1tdt7a7p8' user='ehieysywbgqwmy' host='ec2-54-225-242-183.compute-1.amazonaws.com' password='846ad9e7a623935894144cada5935b40fd6e332cd9001ccb1fc19eeb742d12d5' port='5432'"
+#dsn_old = "dbname='d8qqm1tdt7a7p8' user='ehieysywbgqwmy' host='ec2-54-225-242-183.compute-1.amazonaws.com' password=''"
 psql = psycopg2
 dcurs= DictCursor
 qf  =   QF()
@@ -14,8 +16,9 @@ class DataManager():
 
     def Connect(self):
         conn = psql.connect(dsn_web)
-        curs = conn.cursor()
+        curs = conn.cursor(cursor_factory=DictCursor)
         return  curs
+
 
     def CheckUser(self , username):
         curs = self.Connect()

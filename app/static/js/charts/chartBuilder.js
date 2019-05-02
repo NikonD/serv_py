@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 function getIndsAndRate() {
     JQuery.ajax({
         type: "POST",
@@ -16,74 +16,74 @@ function getIndsAndRate() {
 
 }
 
-function build_chart_by_query() {
-    var marksCanvas = document.getElementById("marksChart");
+//var marksCanvas = document.getElementById("testdiag");
+//var radarChart = new Chart(marksCanvas, {
+//    type: 'line',
+//    data: {
+//        labels: labels,
+//        datasets: [{
+//            label: 'This week',
+//            data: Object.values(data)
+//        }]
+//    });
+//}
+function build_chart_by_query(data) {
 
-    Chart.defaults.global.defaultFontFamily = "Lato";
-    Chart.defaults.global.defaultFontSize = 18;
-
-    var marksData = {
-    labels: ["English", "Maths", "Physics", "Chemistry", "Biology", "History"],
-    datasets: [{
-        label: "Student A",
-        backgroundColor: "rgba(200,200,0,0.2)",
-        borderColor: "rgba(200,200,0,0.6)",
-        fill: true,
-        radius: 3,
-        pointRadius: 2,
-        pointBorderWidth: 3,
-        pointBackgroundColor: "red",
-        pointBorderColor: "rgba(200,0,0,0.6)",
-        pointHoverRadius: 4,
-        data: [65, 75, 70, 80, 60, 80]
-    }, {
-        label: "Student B",
-        backgroundColor: "transparent",
-        borderColor: "rgba(0,0,200,0.6)",
-        fill: false,
-        radius: 3,
-        pointRadius: 2,
-        pointBorderWidth: 3,
-        pointBackgroundColor: "cornflowerblue",
-        pointBorderColor: "rgba(0,0,200,0.6)",
-        pointHoverRadius: 4,
-        data: [54, 65, 60, 70, 70, 75]
-    }]
-    };
-
-    var chartOptions = {
-    scale: {
-        gridLines: {
-        color: "black",
-        lineWidth: 2
-        },
-        angleLines: {
-        display: false
-        },
-        ticks: {
-        beginAtZero: true,
-        min: 0,
-        max: 100,
-        stepSize: 50,
-        fontColor: "#89FF66",
-        // backdropColor: "rgba(109,109,108,0,4)"
-        },
-        pointLabels: {
-        fontSize: 9,
-        fontColor: "green"
+    var diag;
+    var marksCanvas = document.getElementById("testdiag");
+    diag = new Chart(marksCanvas, {
+        type: 'bar',
+        data: {
+            labels: Object.keys(data),
+            backgroundColor: "red",
+            datasets: [
+                {
+                    label: Object.keys(data),
+                    fillColor: "rgb(220,220,220)",
+                    data: Object.keys(data).map(function(key) {
+                        return data[key];
+                    }),
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.4)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)',
+                        'rgba(75, 192, 192, 0.6)',
+                        'rgba(153, 102, 255, 0.6)'
+                    ]
+                }
+            ]
         }
-    },
-    legend: {
-        position: 'left'
-    }
-    };
-
-    var radarChart = new Chart(marksCanvas, {
-        type: 'radar',
-        data: marksData,
-        options: chartOptions
-    });    
+    });
 }
-=======
 // TODO: Write diagram builder
->>>>>>> 347c06ebfe0b6078a8965d76353baae95e75c461
+
+
+
+
+function load_diagrams() {
+    jQuery.ajax({
+        type: 'POST',
+        url:  '/load_diagrams',
+        dataType: 'json',
+        success: function(response){
+//           JSON.parse(response , function( k , v) {
+//                console.log(k);
+//                return true
+//            });
+            console.log(response);
+//            makeDiagram(response);
+            build_chart_by_query(response)
+        }
+    });
+}
+
+function makeDiagram(data) {
+    var marksCanvas = document.getElementById("testdiag");
+
+}
