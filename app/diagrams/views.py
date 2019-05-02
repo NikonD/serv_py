@@ -9,7 +9,7 @@ def load_diagrams():
 
     if request.method=='POST':
         dict={"ind1":1488 , "ind2":8841}
-        rec = dm.GetTeacherRateByIin('t0001')
+        rec = dm.GetTeacherRateByIin('t0005')
         # TODO json response
         response = []
         d = {"_1":1 , "_2":2}

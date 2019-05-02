@@ -27,21 +27,19 @@ function getIndsAndRate() {
 //        }]
 //    });
 //}
-function build_chart_by_query(data) {
+function build_chart_by_query(data , arr_indicators , arr_value) {
     var diag;
     var marksCanvas = document.getElementById("testdiag");
     diag = new Chart(marksCanvas, {
         type: 'pie',
         data: {
-            labels: Object.keys(data),
+            labels: arr_indicators,
             backgroundColor: "red",
             datasets: [
                 {
-                    label: Object.keys(data),
+                    label: "рейтинг по критериям",
                     fillColor: "rgb(220,220,220)",
-                    data: Object.keys(data).map(function(key) {
-                        return data[key];
-                    }),
+                    data: arr_value,
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.4)',
                         'rgba(54, 162, 235, 1)',
@@ -80,10 +78,19 @@ function load_diagrams() {
 //                return v
 //            });
 
-//        true code)    JSON.parse("[{'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}]".replace(/[']/g,'"'));
-            console.log(Object.keys(response[0]));
+            // JSON.parse("[{'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}]".replace(/[']/g,'"'));
+            // console.log(JSON.parse(response.toString().replace(/[']/g,'"')));
+            // console.log(response);
+            var arr_indicators = [];
+            var arr_value = [];
+            for (var i = 0; i < response.length; i++) {
+                arr_indicators[i] = response[i][0];
+                arr_value[i] = response[i][1];
+            }
+            console.log(arr_indicators);
+            console.log(arr_value);
 //            makeDiagram(response);
-            build_chart_by_query(response)
+            build_chart_by_query(response , arr_indicators , arr_value)
         }
     });
 }
