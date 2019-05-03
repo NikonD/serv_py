@@ -71,17 +71,13 @@ function load_diagrams() {
         url:  '/load_diagrams',
         dataType: 'json',
         success: function(response){
-//           JSON.parse(response , function() {
-//               console.log(response);
-////               return v;
-//           });
+           JSON.parse(response.toString().replace(/[']/g,'"'));
 //            JSON.parse(response , function( k , v) {
 //                console.log(k);
 //                return v
 //            });
 
 //        true code)    JSON.parse("[{'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}, {'val': 15.0, 'ind': 'Наличие категории'}]".replace(/[']/g,'"'));
-            console.log(Object.keys(response[0]));
 //            makeDiagram(response);
             build_chart_by_query(response)
         }
