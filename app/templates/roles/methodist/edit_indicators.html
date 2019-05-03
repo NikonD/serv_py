@@ -1,9 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends 'bases/base_main_content.html' %}
+{% block edit_inds %}
 
-</body>
-</html>
+<p>This edit group indicators</p>
+<table class="table">
+    <tbody>
+        {% for row in record_gi %}
+        <tr>
+            {% for col in row %}
+               <td>
+               {{ col }}
+               </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<form method="POST">
+    <input type="text" id="nameind">
+    <a onclick="add_group_inds();" class="btn btn-primary">ADD</a>
+    <input type="text" id="ind_id">
+    <a onclick="del_group_inds();" class="btn btn-primary">Del</a>
+</form>
+
+<div class="edit_block">
+    <form class="form" method="POST">
+    {{ ei.select_inds }}
+    {{ ei.text_name_ind }}
+    {{ ei.btn_add }}
+    {{ ei.text_id_ind }}
+    {{ ei.btn_del }}
+    </form>
+</div>
+   <div id="ind">
+    {% block inds_for_group %}{% endblock %}
+   </div>
+
+{% endblock %}

@@ -157,7 +157,7 @@ table.table {
 }
 */
 .content {
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
 }
 .header {
@@ -225,9 +225,9 @@ table.table {
   font-weight: 300;
   border-radius: 17px;
 }
-.header form input::placeholder {
-  color: #d0ced1;
-}
+/*.header form input::placeholder {*/
+  /*color: red;*/
+/*}*/
 .header nav {
   height: 100%;
   width: 33.33%;

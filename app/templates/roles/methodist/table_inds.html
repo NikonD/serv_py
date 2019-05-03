@@ -1,0 +1,15 @@
+{% block inds_for_group %}
+    <table class="table">
+    <tbody>
+        {% for row in inds %}
+        <tr>
+            {% for col in row %}
+               <td>
+               {{ col }}
+               </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

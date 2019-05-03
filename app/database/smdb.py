@@ -10,7 +10,7 @@ dsn_web2 = "dbname='d8qqm1tdt7a7p8' user='ehieysywbgqwmy' host='ec2-54-225-242-1
 psql = psycopg2
 dcurs= DictCursor
 qf  =   QF()
-ph  =   PasswordHasher(time_cost=5,hash_len=100)
+ph  =   PasswordHasher(hash_len=100)
 
 class DataManager():
 
@@ -108,12 +108,42 @@ class DataManager():
         return curs.fetchall()
 
     #dev
-    def GetIndicators(self):
+    def GetIndicators(self , group):
         curs = self.Connect()
-        curs.execute("SELECT * From indicator")
+        curs.execute("SELECT indicator.indicator_id , indicator.indicator_name FROM indicator INNER JOIN indicator_group ON indicator_group.indicator_group_id ='%i' and indicator.indicator_group_id=indicator_group.indicator_group_id" % group)
         return curs.fetchall()
 
     #dev
+    def GetGroupIndicators(self):
+        curs = self.Connect()
+        curs.execute("SELECT * FROM indicator_group")
+        return curs.fetchall()
+
+    #dev
+    def AddGroupInds(self , name):
+        conn = psql.connect(dsn_web)
+        curs = conn.cursor()
+        curs.execute("INSERT INTO indicator_group(indicator_group_name) VALUES('%s')" % name)
+        conn.commit()
+    #dev
+    def DelGroupInds(self , id):
+        conn = psql.connect(dsn_web)
+        curs = conn.cursor()
+        curs.execute("DELETE FROM indicator_group WHERE indicator_group_id = '%i'" % id)
+        conn.commit()
+    #dev
+    def AddInds(self , select , name):
+        conn = psql.connect(dsn_web)
+        curs = conn.cursor()
+        curs.execute("INSERT INTO indicator(indicator_name , indicator_group_id) VALUES('%s' , '%i')" % (name , select,))
+        conn.commit()
+    #dev
+    def DelInds(self , id):
+        conn = psql.connect(dsn_web)
+        curs = conn.cursor()
+        curs.execute("DELETE FROM indicator WHERE indicator_id = '%i'" % id)
+        conn.commit()
+
     def GetTeachersByManagePerson(self , id_mp , id_season):
         curs = self.Connect()
         curs.execute(QF.get_teachers_and_rate_value_by_manager_teachers(self ,id_mp , id_season))

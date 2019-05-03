@@ -67,7 +67,7 @@ function load_diagrams() {
         url:  '/load_diagrams',
         dataType: 'json',
         success: function(response){
-           JSON.parse(response.toString().replace(/[']/g,'"'));
+          // JSON.parse(response.toString().replace(/[']/g,'"'));
 //            JSON.parse(response , function( k , v) {
 //                console.log(k);
 //                return v
