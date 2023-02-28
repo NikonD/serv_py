@@ -1,5 +1,5 @@
 #!rate_system/bin/python
-
+# comment
 from app import app
 # from app.auth import app
 
